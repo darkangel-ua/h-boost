@@ -1,0 +1,13 @@
+project "boost/type_index" : requirements <version>1.58.0 ;
+
+header-lib boost.type_index 
+   : /boost/config/<version>1.58.0
+     /boost/core/<version>1.58.0
+     /boost/functional/<version>1.58.0
+     /boost/mpl/<version>1.58.0
+     /boost/preprocessor/<version>1.58.0
+     /boost/static_assert/<version>1.58.0
+     /boost/throw_exception/<version>1.58.0
+     /boost/type_traits/<version>1.58.0 
+   : @<include>../include
+   ;

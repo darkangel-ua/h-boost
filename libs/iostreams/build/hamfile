@@ -1,0 +1,25 @@
+project "boost/iostreams" : requirements <version>1.58.0 ;
+
+lib boost.iostreams 
+   : ../src/mapped_file.cpp
+     @/boost/assert/<version>1.58.0
+     @/boost/bind/<version>1.58.0
+     @/boost/config/<version>1.58.0
+     @/boost/core/<version>1.58.0
+     @/boost/detail/<version>1.58.0
+     @/boost/function/<version>1.58.0
+     @/boost/integer/<version>1.58.0
+     @/boost/mpl/<version>1.58.0
+     @/boost/preprocessor/<version>1.58.0
+     @/boost/random/<version>1.58.0
+     @/boost/range/<version>1.58.0
+     @/boost/regex/<version>1.58.0
+     @/boost/smart_ptr/<version>1.58.0
+     @/boost/static_assert/<version>1.58.0
+     @/boost/throw_exception/<version>1.58.0
+     @/boost/type_traits/<version>1.58.0
+     @/boost/utility/<version>1.58.0
+   : @<include>../include
+      <define>BOOST_IOSTREAMS_USE_DEPRECATED
+     @<link>shared:<define>BOOST_IOSTREAMS_DYN_LINK=1
+   ;

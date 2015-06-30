@@ -1,0 +1,6 @@
+project "boost/random" : requirements <version>1.58.0 ;
+
+header-lib boost.random 
+   :
+   : @<include>../include
+   ;

@@ -1,0 +1,53 @@
+project "boost/thread" : requirements <version>1.58.0 ;
+
+searched-shared-lib pthread : : pthread ;                                                                  
+explicit pthread ; 
+
+alias src 
+   : ../src/win32/thread.cpp 
+     ../src/win32/tss_dll.cpp                                                     
+     ../src/win32/tss_pe.cpp                                                                     
+   : <host-os>windows 
+   ;
+
+alias src
+   : ../src/pthread/thread.cpp 
+     ../src/pthread/once.cpp                                                                    
+     pthread 
+   : <host-os>linux 
+   ;
+
+explicit src ;
+   
+lib boost.thread 
+   : ../src/future.cpp
+     src
+     @/boost/container/<version>1.58.0
+     @/boost/assert/<version>1.58.0
+     @/boost/atomic/<version>1.58.0
+     @/boost/bind/<version>1.58.0
+     @/boost/chrono/<version>1.58.0
+     @/boost/concept_check/<version>1.58.0
+     @/boost/config/<version>1.58.0
+     @/boost/core/<version>1.58.0
+     @/boost/date_time/<version>1.58.0
+     @/boost/exception/<version>1.58.0
+     @/boost/function/<version>1.58.0
+     @/boost/intrusive/<version>1.58.0
+     @/boost/io/<version>1.58.0
+     @/boost/move/<version>1.58.0
+     @/boost/mpl/<version>1.58.0
+     @/boost/optional/<version>1.58.0
+     @/boost/predef/<version>1.58.0
+     @/boost/preprocessor/<version>1.58.0
+     @/boost/smart_ptr/<version>1.58.0
+     @/boost/static_assert/<version>1.58.0
+     @/boost/system/<version>1.58.0
+     @/boost/throw_exception/<version>1.58.0
+     @/boost/tuple/<version>1.58.0
+     @/boost/type_traits/<version>1.58.0
+     @/boost/winapi/<version>1.58.0
+   : @<include>../include
+     @<link>static:<define>BOOST_THREAD_BUILD_LIB=1                                                        
+     @<link>shared:<define>BOOST_THREAD_BUILD_DLL=1
+   ;

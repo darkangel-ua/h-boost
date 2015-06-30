@@ -1,0 +1,6 @@
+project "boost/foreach" : requirements <version>1.58.0 ;
+
+header-lib boost.foreach 
+   :
+   : @<include>../include
+   ;

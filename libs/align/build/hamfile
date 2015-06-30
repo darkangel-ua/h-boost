@@ -1,0 +1,10 @@
+project "boost/align" : requirements <version>1.58.0 ;
+
+header-lib boost.align 
+   : /boost/assert/<version>1.58.0
+     /boost/config/<version>1.58.0
+     /boost/core/<version>1.58.0
+     /boost/static_assert/<version>1.58.0
+     /boost/throw_exception/<version>1.58.0
+   : @<include>../include
+   ;

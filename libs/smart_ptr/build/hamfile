@@ -1,0 +1,12 @@
+project "boost/smart_ptr" : requirements <version>1.58.0 ;
+
+header-lib boost.smart_ptr 
+   : /boost/align/<version>1.58.0
+     /boost/config/<version>1.58.0
+     /boost/assert/<version>1.58.0
+     /boost/core/<version>1.58.0
+     /boost/predef/<version>1.58.0
+     /boost/throw_exception/<version>1.58.0
+     /boost/type_traits/<version>1.58.0
+   : @<include>../include
+   ;

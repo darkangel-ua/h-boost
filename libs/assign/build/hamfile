@@ -1,0 +1,14 @@
+project "boost/assign" : requirements <version>1.58.0 ;
+
+header-lib boost.assign 
+   : /boost/array/<version>1.58.0
+     /boost/config/<version>1.58.0
+     /boost/mpl/<version>1.58.0
+     /boost/preprocessor/<version>1.58.0
+     /boost/ptr_container/<version>1.58.0
+     /boost/range/<version>1.58.0
+     /boost/static_assert/<version>1.58.0
+     /boost/tuple/<version>1.58.0
+     /boost/type_traits/<version>1.58.0
+   : @<include>../include
+   ;

@@ -1,0 +1,6 @@
+project "boost/spirit" : requirements <version>1.58.0 ;
+
+header-lib boost.spirit 
+   :
+   : @<include>../include
+   ;
