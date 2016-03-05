@@ -47,9 +47,9 @@ lib boost.serialization
      @/boost/utility/<version>1.58.0
      @/boost/variant/<version>1.58.0
    : @<include>../include
-      <toolset>gcc:<cxxflags>"-fvisibility=hidden"
-      <toolset>gcc:<cxxflags>"-fvisibility-inlines-hidden"
-      <toolset>darwin:<cxxflags>"-fvisibility=hidden"
-      <toolset>darwin:<cxxflags>"-fvisibility-inlines-hidden"
+      #<toolset>gcc:<cxxflags>"-fvisibility=hidden"
+      #<toolset>gcc:<cxxflags>"-fvisibility-inlines-hidden"
+      #<toolset>darwin:<cxxflags>"-fvisibility=hidden"
+      #<toolset>darwin:<cxxflags>"-fvisibility-inlines-hidden"
      @<link>shared:<define>BOOST_SERIALIZATION_DYN_LINK=1
    ;
