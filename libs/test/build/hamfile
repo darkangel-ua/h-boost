@@ -1,0 +1,76 @@
+project "boost/test"
+   : requirements
+         <version>1.58.0
+        @<include>../include
+# if uncommented will work wrong because of undefined order of evaluation 
+# for conditional features
+#        @<link>shared:<define>BOOST_TEST_DYN_LINK=1
+        <toolset>msvc:<asynch-exceptions>on
+   ;
+
+    
+alias base_sources
+   :
+  ../src/compiler_log_formatter.cpp
+  ../src/debug.cpp
+  ../src/exception_safety.cpp
+  ../src/execution_monitor.cpp
+  ../src/framework.cpp
+  ../src/interaction_based.cpp
+  ../src/logged_expectations.cpp
+  ../src/plain_report_formatter.cpp
+  ../src/progress_monitor.cpp
+  ../src/results_collector.cpp
+  ../src/results_reporter.cpp
+  ../src/test_tools.cpp
+  ../src/unit_test_log.cpp
+  ../src/unit_test_main.cpp
+  ../src/unit_test_monitor.cpp
+  ../src/unit_test_parameters.cpp
+  ../src/unit_test_suite.cpp
+  ../src/xml_log_formatter.cpp
+  ../src/xml_report_formatter.cpp
+   ;
+explicit base_sources ;
+
+lib utf
+   :
+     base_sources
+     @/boost/core/<version>1.58.0
+     @/boost/smart_ptr/<version>1.58.0
+     @/boost/iterator/<version>1.58.0
+     @/boost/timer/<version>1.58.0
+     @/boost/conversion/<version>1.58.0
+     @/boost/io/<version>1.58.0
+     /boost/integer/<version>1.58.0
+     @/boost/exception/<version>1.58.0
+   :
+    <link>static
+   ;
+
+explicit utf ;
+
+header-lib boost.test.minimal 
+   :
+    /boost/smart_ptr/<version>1.58.0 
+   ;
+explicit boost.test.minimal ;
+
+lib boost.test.execution_monitor 
+   :
+    base_sources
+    ../src/test_main.cpp
+
+    @/boost/core/<version>1.58.0
+    @/boost/smart_ptr/<version>1.58.0
+    @/boost/iterator/<version>1.58.0
+    @/boost/timer/<version>1.58.0
+    @/boost/conversion/<version>1.58.0
+    @/boost/io/<version>1.58.0
+    /boost/integer/<version>1.58.0
+     @/boost/exception/<version>1.58.0
+   :
+    <link>static
+   ;
+
+explicit boost.test.execution_monitor ;

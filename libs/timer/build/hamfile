@@ -1,0 +1,10 @@
+project "boost/timer" : requirements <version>1.58.0 ;
+
+header-lib boost.timer
+   :
+    /boost/integer/<version>1.58.0
+   :
+   :
+   :
+    <include>../include
+   ;
