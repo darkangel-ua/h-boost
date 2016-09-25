@@ -64,3 +64,5 @@ use-project any : libs/any/build ;
 use-project type_index : libs/type_index/build ;
 use-project circular_buffer : libs/circular_buffer/build ;
 use-project variant : libs/variant/build ;
+use-project test : libs/test/build ;
+use-project timer : libs/timer/build ;
