@@ -1,19 +1,19 @@
-project "boost/filesystem" : requirements <version>1.58.0 ;
+project "boost/filesystem" : requirements <version>1.58.0+1 ;
 
 lib boost.filesystem 
    : [ glob ../src/*.cpp ] 
-     @/boost/assert/<version>1.58.0
-     @/boost/config/<version>1.58.0
-     @/boost/core/<version>1.58.0
-     @/boost/detail/<version>1.58.0
-     @/boost/functional/<version>1.58.0
-     @/boost/io/<version>1.58.0
-     @/boost/iterator/<version>1.58.0
-     @/boost/range/<version>1.58.0
-     @/boost/smart_ptr/<version>1.58.0
-     @/boost/static_assert/<version>1.58.0
-     @/boost/system/<version>1.58.0
-     @/boost/type_traits/<version>1.58.0
+     @/boost/assert/<version>1.58.0+1
+     @/boost/config/<version>1.58.0+1
+     @/boost/core/<version>1.58.0+1
+     @/boost/detail/<version>1.58.0+1
+     @/boost/functional/<version>1.58.0+1
+     @/boost/io/<version>1.58.0+1
+     @/boost/iterator/<version>1.58.0+1
+     @/boost/range/<version>1.58.0+1
+     @/boost/smart_ptr/<version>1.58.0+1
+     @/boost/static_assert/<version>1.58.0+1
+     @/boost/system/<version>1.58.0+1
+     @/boost/type_traits/<version>1.58.0+1
    : @<include>../include
      @<link>shared:<define>BOOST_FILESYSTEM_DYN_LINK=1                                                     
      @<link>static:<define>BOOST_FILESYSTEM_STATIC_LINK=1

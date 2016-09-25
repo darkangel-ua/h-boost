@@ -1,22 +1,22 @@
-project "boost/range" : requirements <version>1.58.0 ;
+project "boost/range" : requirements <version>1.58.0+1 ;
 
 header-lib boost.range 
-   : /boost/array/<version>1.58.0
-     /boost/assert/<version>1.58.0
-     /boost/concept_check/<version>1.58.0
-     /boost/config/<version>1.58.0
-     /boost/core/<version>1.58.0
-     /boost/detail/<version>1.58.0
-     /boost/functional/<version>1.58.0
-     /boost/iterator/<version>1.58.0
-     /boost/mpl/<version>1.58.0
-     /boost/numeric/conversion/<version>1.58.0
-     /boost/optional/<version>1.58.0
-     /boost/preprocessor/<version>1.58.0
-     /boost/regex/<version>1.58.0
-     /boost/static_assert/<version>1.58.0
-     /boost/tuple/<version>1.58.0
-     /boost/type_traits/<version>1.58.0
-     /boost/utility/<version>1.58.0
+   : /boost/array/<version>1.58.0+1
+     /boost/assert/<version>1.58.0+1
+     /boost/concept_check/<version>1.58.0+1
+     /boost/config/<version>1.58.0+1
+     /boost/core/<version>1.58.0+1
+     /boost/detail/<version>1.58.0+1
+     /boost/functional/<version>1.58.0+1
+     /boost/iterator/<version>1.58.0+1
+     /boost/mpl/<version>1.58.0+1
+     /boost/numeric/conversion/<version>1.58.0+1
+     /boost/optional/<version>1.58.0+1
+     /boost/preprocessor/<version>1.58.0+1
+     /boost/regex/<version>1.58.0+1
+     /boost/static_assert/<version>1.58.0+1
+     /boost/tuple/<version>1.58.0+1
+     /boost/type_traits/<version>1.58.0+1
+     /boost/utility/<version>1.58.0+1
    : @<include>../include
    ;

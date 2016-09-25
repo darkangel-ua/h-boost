@@ -1,4 +1,4 @@
-project "boost/serialization" : requirements <version>1.58.0 ;
+project "boost/serialization" : requirements <version>1.58.0+1 ;
 
 lib boost.serialization 
    : ../src/basic_archive.cpp
@@ -28,24 +28,24 @@ lib boost.serialization
      ../src/xml_iarchive.cpp
      ../src/xml_oarchive.cpp
      ../src/xml_archive_exception.cpp
-     @/boost/array/<version>1.58.0
-     @/boost/assert/<version>1.58.0
-     @/boost/config/<version>1.58.0
-     @/boost/core/<version>1.58.0
-     @/boost/detail/<version>1.58.0
-     @/boost/integer/<version>1.58.0
-     @/boost/io/<version>1.58.0
-     @/boost/iterator/<version>1.58.0
-     @/boost/mpl/<version>1.58.0
-     @/boost/optional/<version>1.58.0
-     @/boost/predef/<version>1.58.0
-     @/boost/preprocessor/<version>1.58.0
-     @/boost/smart_ptr/<version>1.58.0
-     @/boost/spirit/<version>1.58.0
-     @/boost/static_assert/<version>1.58.0
-     @/boost/type_traits/<version>1.58.0
-     @/boost/utility/<version>1.58.0
-     @/boost/variant/<version>1.58.0
+     @/boost/array/<version>1.58.0+1
+     @/boost/assert/<version>1.58.0+1
+     @/boost/config/<version>1.58.0+1
+     @/boost/core/<version>1.58.0+1
+     @/boost/detail/<version>1.58.0+1
+     @/boost/integer/<version>1.58.0+1
+     @/boost/io/<version>1.58.0+1
+     @/boost/iterator/<version>1.58.0+1
+     @/boost/mpl/<version>1.58.0+1
+     @/boost/optional/<version>1.58.0+1
+     @/boost/predef/<version>1.58.0+1
+     @/boost/preprocessor/<version>1.58.0+1
+     @/boost/smart_ptr/<version>1.58.0+1
+     @/boost/spirit/<version>1.58.0+1
+     @/boost/static_assert/<version>1.58.0+1
+     @/boost/type_traits/<version>1.58.0+1
+     @/boost/utility/<version>1.58.0+1
+     @/boost/variant/<version>1.58.0+1
    : @<include>../include
       #<toolset>gcc:<cxxflags>"-fvisibility=hidden"
       #<toolset>gcc:<cxxflags>"-fvisibility-inlines-hidden"

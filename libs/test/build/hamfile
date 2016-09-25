@@ -1,6 +1,6 @@
 project "boost/test"
    : requirements
-         <version>1.58.0
+         <version>1.58.0+1
         @<include>../include
 # if uncommented will work wrong because of undefined order of evaluation 
 # for conditional features
@@ -36,14 +36,14 @@ explicit base_sources ;
 lib utf
    :
      base_sources
-     @/boost/core/<version>1.58.0
-     @/boost/smart_ptr/<version>1.58.0
-     @/boost/iterator/<version>1.58.0
-     @/boost/timer/<version>1.58.0
-     @/boost/conversion/<version>1.58.0
-     @/boost/io/<version>1.58.0
-     /boost/integer/<version>1.58.0
-     @/boost/exception/<version>1.58.0
+     @/boost/core/<version>1.58.0+1
+     @/boost/smart_ptr/<version>1.58.0+1
+     @/boost/iterator/<version>1.58.0+1
+     @/boost/timer/<version>1.58.0+1
+     @/boost/conversion/<version>1.58.0+1
+     @/boost/io/<version>1.58.0+1
+     /boost/integer/<version>1.58.0+1
+     @/boost/exception/<version>1.58.0+1
    :
     <link>static
    ;
@@ -52,7 +52,7 @@ explicit utf ;
 
 header-lib boost.test.minimal 
    :
-    /boost/smart_ptr/<version>1.58.0 
+    /boost/smart_ptr/<version>1.58.0+1 
    ;
 explicit boost.test.minimal ;
 
@@ -61,14 +61,14 @@ lib boost.test.execution_monitor
     base_sources
     ../src/test_main.cpp
 
-    @/boost/core/<version>1.58.0
-    @/boost/smart_ptr/<version>1.58.0
-    @/boost/iterator/<version>1.58.0
-    @/boost/timer/<version>1.58.0
-    @/boost/conversion/<version>1.58.0
-    @/boost/io/<version>1.58.0
-    /boost/integer/<version>1.58.0
-     @/boost/exception/<version>1.58.0
+    @/boost/core/<version>1.58.0+1
+    @/boost/smart_ptr/<version>1.58.0+1
+    @/boost/iterator/<version>1.58.0+1
+    @/boost/timer/<version>1.58.0+1
+    @/boost/conversion/<version>1.58.0+1
+    @/boost/io/<version>1.58.0+1
+    /boost/integer/<version>1.58.0+1
+     @/boost/exception/<version>1.58.0+1
    :
     <link>static
    ;

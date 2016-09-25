@@ -1,6 +1,6 @@
-project "boost/assert" : requirements <version>1.58.0 ;
+project "boost/assert" : requirements <version>1.58.0+1 ;
 
 header-lib boost.assert 
-   : /boost/config/<version>1.58.0
+   : /boost/config/<version>1.58.0+1
    : @<include>../include
    ;

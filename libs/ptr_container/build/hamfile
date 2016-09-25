@@ -1,19 +1,19 @@
-project "boost/ptr_container" : requirements <version>1.58.0 ;
+project "boost/ptr_container" : requirements <version>1.58.0+1 ;
 
 header-lib boost.ptr_container 
-   : /boost/array/<version>1.58.0
-     /boost/assert/<version>1.58.0
-     /boost/circular_buffer/<version>1.58.0
-     /boost/config/<version>1.58.0
-     /boost/core/<version>1.58.0
-     /boost/iterator/<version>1.58.0
-     /boost/mpl/<version>1.58.0
-     /boost/range/<version>1.58.0
-     /boost/serialization/<version>1.58.0
-     /boost/smart_ptr/<version>1.58.0
-     /boost/static_assert/<version>1.58.0
-     /boost/type_traits/<version>1.58.0
-     /boost/unordered/<version>1.58.0
-     /boost/utility/<version>1.58.0
+   : /boost/array/<version>1.58.0+1
+     /boost/assert/<version>1.58.0+1
+     /boost/circular_buffer/<version>1.58.0+1
+     /boost/config/<version>1.58.0+1
+     /boost/core/<version>1.58.0+1
+     /boost/iterator/<version>1.58.0+1
+     /boost/mpl/<version>1.58.0+1
+     /boost/range/<version>1.58.0+1
+     /boost/serialization/<version>1.58.0+1
+     /boost/smart_ptr/<version>1.58.0+1
+     /boost/static_assert/<version>1.58.0+1
+     /boost/type_traits/<version>1.58.0+1
+     /boost/unordered/<version>1.58.0+1
+     /boost/utility/<version>1.58.0+1
    : @<include>../include
    ;

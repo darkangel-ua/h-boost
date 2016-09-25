@@ -1,4 +1,4 @@
-project boost : requirements <version>1.58.0 ;
+project boost : requirements <version>1.58.0+1 ;
 
 use-project core : libs/core/build ;
 use-project optional : libs/optional/build ;
