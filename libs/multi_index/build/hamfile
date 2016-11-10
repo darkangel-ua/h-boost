@@ -1,6 +1,6 @@
 project "boost/multi_index" : requirements <version>1.58.0+1 ;
 
 header-lib boost.multi_index 
-   :
+   : /boost/foreach/<version>1.58.0+1
    : @<include>../include
    ;

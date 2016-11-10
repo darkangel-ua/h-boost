@@ -1,0 +1,70 @@
+feature.feature iterator_debugging
+  : on off
+  : composite propagated optional
+  ;
+
+feature.compose <iterator_debugging>off
+  : <define>_HAS_ITERATOR_DEBUGGING=0
+  ;
+
+project tests
+    : requirements
+      <toolset>msvc:<define>_SCL_SECURE_NO_DEPRECATE
+      # MSVC's iterator debugging causes some tests to testing.run forever.
+      <toolset>msvc:<iterator_debugging>off
+#      <toolset>intel-win:<iterator_debugging>off
+    ;
+
+test-suite accumulators
+    : [ testing.run count.cpp ]
+      [ testing.run covariance.cpp ]
+      [ testing.run droppable.cpp ]
+      [ testing.run error_of.cpp ]
+      [ testing.run extended_p_square.cpp ]
+      [ testing.run extended_p_square_quantile.cpp ]
+      [ testing.run external_accumulator.cpp ]
+      [ testing.run external_weights.cpp ]
+      [ testing.run kurtosis.cpp ]
+      [ testing.run max.cpp ]
+      [ testing.run mean.cpp ]
+      [ testing.run median.cpp ]
+      [ testing.run min.cpp ]
+      [ testing.run moment.cpp ]
+      [ testing.run pot_quantile.cpp ]
+      [ testing.run p_square_cumul_dist.cpp ]
+      [ testing.run p_square_quantile.cpp ]
+      [ testing.run reference.cpp ]
+      [ testing.run rolling_count.cpp ]
+      [ testing.run rolling_sum.cpp ]
+      [ testing.run rolling_mean.cpp ]
+      [ testing.run skewness.cpp ]
+      [ testing.run sum.cpp ]
+      [ testing.run sum_kahan.cpp ]
+      [ testing.run tail.cpp ]
+      [ testing.run tail_mean.cpp ]
+      [ testing.run tail_quantile.cpp ]
+      [ testing.run tail_variate_means.cpp ]
+      [ testing.run valarray.cpp ]
+      [ testing.run variance.cpp ]
+      [ testing.run vector.cpp ]
+      [ testing.run weighted_covariance.cpp ]
+      [ testing.run weighted_extended_p_square.cpp ]
+      [ testing.run weighted_kurtosis.cpp ]
+      [ testing.run weighted_mean.cpp ]
+      [ testing.run weighted_median.cpp ]
+      [ testing.run weighted_moment.cpp ]
+      [ testing.run weighted_p_square_cumul_dist.cpp ]
+      [ testing.run weighted_p_square_quantile.cpp ]
+      [ testing.run weighted_skewness.cpp ]
+      [ testing.run weighted_sum.cpp ]
+      [ testing.run weighted_sum_kahan.cpp ]
+      [ testing.run weighted_variance.cpp ]
+      [ testing.run weighted_pot_quantile.cpp ]
+      [ testing.run weighted_tail_mean.cpp ]
+      [ testing.run weighted_tail_quantile.cpp ]
+      [ testing.run weighted_tail_variate_means.cpp ]
+    :
+      /boost/test//utf/<version>1.58.0+1
+      /boost/accumulators/<version>1.58.0+1
+      /boost/random/<version>1.58.0+1
+    ;

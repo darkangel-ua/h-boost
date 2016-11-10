@@ -1,5 +1,9 @@
 project boost : requirements <version>1.58.0+1 ;
 
+use-project accumulators : libs/accumulators/build ;
+use-project parameter : libs/parameter/build ;
+use-project python : libs/python/build ;
+use-project fusion : libs/fusion/build ;
 use-project core : libs/core/build ;
 use-project optional : libs/optional/build ;
 use-project date_time : libs/date_time/build ;

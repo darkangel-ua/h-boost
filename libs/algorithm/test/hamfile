@@ -1,0 +1,52 @@
+test-suite algorithm 
+   :
+# Search tests
+     [ testing.run empty_search_test.cpp ]
+     [ testing.run search_test1.cpp ]
+     [ testing.run search_test2.cpp ]
+     [ testing.run search_test3.cpp ]
+     [ testing.run search_test4.cpp ]
+     [ testing.compile-fail search_fail1.cpp ]
+     [ testing.compile-fail search_fail2.cpp ]
+     [ testing.compile-fail search_fail3.cpp ]
+
+# Misc tests
+     [ testing.run clamp_test.cpp ]
+     [ testing.run power_test.cpp ]
+     [ testing.compile-fail power_fail1.cpp ]
+   
+# Cxx11 tests
+     [ testing.run all_of_test.cpp ]
+     [ testing.run any_of_test.cpp ]
+     [ testing.run none_of_test.cpp ]
+     [ testing.run one_of_test.cpp ]
+     
+     [ testing.run ordered_test.cpp ]
+     [ testing.run find_if_not_test1.cpp ]
+     [ testing.run copy_if_test1.cpp ]
+     [ testing.run copy_n_test1.cpp ]
+     [ testing.run iota_test1.cpp ]
+
+     [ testing.run is_permutation_test1.cpp ]
+     [ testing.run partition_point_test1.cpp ]
+     [ testing.run is_partitioned_test1.cpp ]
+     [ testing.run partition_copy_test1.cpp ]
+
+# Cxx14 tests
+     [ testing.run equal_test.cpp ]
+     [ testing.run mismatch_test.cpp ]
+
+# Hex tests
+     [ testing.run hex_test1.cpp ]
+     [ testing.run hex_test2.cpp ]
+     [ testing.run hex_test3.cpp ]
+     [ testing.run hex_test4.cpp ]
+     [ testing.compile-fail hex_fail1.cpp ]
+
+# Gather tests
+     [ testing.run gather_test1.cpp ]
+     [ testing.compile-fail gather_fail1.cpp ]
+   :
+     /boost/test//utf/<version>1.58.0+1
+     /boost/algorithm/<version>1.58.0+1
+   ;

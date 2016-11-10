@@ -1,2 +1,4 @@
 
 use-project conversion : conversion/build ;  
+use-project ublas : ublas/build ;
+use-project interval : interval/build ;

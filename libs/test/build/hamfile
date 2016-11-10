@@ -33,17 +33,32 @@ alias base_sources
    ;
 explicit base_sources ;
 
+alias dependencies 
+   :
+     @/boost/bind/<version>1.58.0+1
+     @/boost/config/<version>1.58.0+1
+     @/boost/core/<version>1.58.0+1
+     @/boost/detail/<version>1.58.0+1
+     @/boost/exception/<version>1.58.0+1
+     @/boost/io/<version>1.58.0+1
+     @/boost/iterator/<version>1.58.0+1
+     @/boost/lexical_cast/<version>1.58.0+1
+     @/boost/mpl/<version>1.58.0+1
+     @/boost/numeric/conversion/<version>1.58.0+1
+     @/boost/optional/<version>1.58.0+1
+     @/boost/preprocessor/<version>1.58.0+1
+     @/boost/smart_ptr/<version>1.58.0+1
+     @/boost/static_assert/<version>1.58.0+1
+     @/boost/timer/<version>1.58.0+1
+     @/boost/type_traits/<version>1.58.0+1
+     @/boost/utility/<version>1.58.0+1
+   ;
+explicit dependencies ;
+
 lib utf
    :
      base_sources
-     @/boost/core/<version>1.58.0+1
-     @/boost/smart_ptr/<version>1.58.0+1
-     @/boost/iterator/<version>1.58.0+1
-     @/boost/timer/<version>1.58.0+1
-     @/boost/conversion/<version>1.58.0+1
-     @/boost/io/<version>1.58.0+1
-     /boost/integer/<version>1.58.0+1
-     @/boost/exception/<version>1.58.0+1
+     dependencies
    :
     <link>static
    ;
@@ -60,15 +75,7 @@ lib boost.test.execution_monitor
    :
     base_sources
     ../src/test_main.cpp
-
-    @/boost/core/<version>1.58.0+1
-    @/boost/smart_ptr/<version>1.58.0+1
-    @/boost/iterator/<version>1.58.0+1
-    @/boost/timer/<version>1.58.0+1
-    @/boost/conversion/<version>1.58.0+1
-    @/boost/io/<version>1.58.0+1
-    /boost/integer/<version>1.58.0+1
-     @/boost/exception/<version>1.58.0+1
+    dependencies
    :
     <link>static
    ;
