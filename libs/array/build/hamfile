@@ -1,6 +1,11 @@
 project "boost/array" : requirements <version>1.58.0+1 ;
 
-header-lib boost.array 
+header-lib boost.array  
    :
+     /boost/assert/<version>1.58.0+1
+     /boost/config/<version>1.58.0+1
+     /boost/core/<version>1.58.0+1
+     /boost/functional/<version>1.58.0+1
+     /boost/throw_exception/<version>1.58.0+1
    : @<include>../include
    ;

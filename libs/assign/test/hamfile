@@ -1,0 +1,20 @@
+test-suite assign :
+    [ testing.run basic.cpp ]
+    [ testing.run std.cpp ]
+    [ testing.run list_of.cpp ]
+    [ testing.run ptr_list_of.cpp ]
+    [ testing.run static_list_of.cpp ]
+    [ testing.run tuple_list_of.cpp ]
+    [ testing.run list_inserter.cpp ]
+    [ testing.run ptr_list_inserter.cpp ]
+    [ testing.run ptr_map_inserter.cpp ]
+    [ testing.run list_of_workaround.cpp ]
+    [ testing.run email_example.cpp ]
+    [ testing.run my_vector_example.cpp ]
+    [ testing.run multi_index_container.cpp ]      
+  : 
+    /boost/assign/<version>1.58.0+1
+    /boost/test//utf/<version>1.58.0+1    
+  ;
+
+

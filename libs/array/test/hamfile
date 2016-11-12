@@ -1,0 +1,13 @@
+test-suite array :
+    [ testing.run array0.cpp ]
+    [ testing.run array1.cpp ]
+    [ testing.run array2.cpp ]
+    [ testing.run array3.cpp ]
+    [ testing.run array4.cpp ]
+    [ testing.run array5.cpp ]
+    [ testing.run array6.cpp ]
+    [ testing.run array_hash.cpp ]
+   : 
+    /boost/array/<version>1.58.0+1
+    /boost/test//utf/<version>1.58.0+1
+    ;

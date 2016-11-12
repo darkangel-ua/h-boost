@@ -1,0 +1,12 @@
+test-suite any :
+    [ testing.run any_test.cpp ]
+    [ testing.run any_test.cpp : : : <rtti>off <define>BOOST_NO_RTTI <define>BOOST_NO_TYPEID : any_test_no_rtti  ]
+    [ testing.run any_test_rv.cpp ]
+    [ testing.compile-fail any_cast_cv_failed.cpp ]
+    [ testing.compile-fail any_test_temporary_to_ref_failed.cpp ]
+    [ testing.compile-fail any_test_cv_to_rv_failed.cpp ]
+   :
+    /boost/any/<version>1.58.0+1
+    ;
+
+

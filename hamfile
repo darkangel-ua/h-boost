@@ -1,5 +1,7 @@
 project boost : requirements <version>1.58.0+1 ;
 
+use-project context : libs/context/build ;
+use-project coroutine : libs/coroutine/build ;
 use-project accumulators : libs/accumulators/build ;
 use-project parameter : libs/parameter/build ;
 use-project python : libs/python/build ;

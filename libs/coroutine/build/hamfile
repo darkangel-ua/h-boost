@@ -1,0 +1,17 @@
+project "boost/coroutine" : requirements <version>1.58.0+1 ;
+
+header-lib boost.coroutine  
+   :
+     /boost/assert/<version>1.58.0+1
+     /boost/config/<version>1.58.0+1
+     /boost/context/<version>1.58.0+1
+     /boost/core/<version>1.58.0+1
+     /boost/exception/<version>1.58.0+1
+     /boost/move/<version>1.58.0+1
+     /boost/range/<version>1.58.0+1
+     /boost/system/<version>1.58.0+1
+     /boost/throw_exception/<version>1.58.0+1
+     /boost/type_traits/<version>1.58.0+1
+     /boost/utility/<version>1.58.0+1
+   : @<include>../include
+   ;
