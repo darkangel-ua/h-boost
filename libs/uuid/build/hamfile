@@ -1,0 +1,16 @@
+project "boost/uuid" : requirements <version>1.58.0+1 ;
+
+header-lib boost.uuid 
+   :
+     /boost/assert/<version>1.58.0+1
+     /boost/config/<version>1.58.0+1
+     /boost/io/<version>1.58.0+1
+     /boost/iterator/<version>1.58.0+1
+     /boost/random/<version>1.58.0+1
+     /boost/serialization/<version>1.58.0+1
+     /boost/smart_ptr/<version>1.58.0+1
+     /boost/static_assert/<version>1.58.0+1
+     /boost/throw_exception/<version>1.58.0+1
+     /boost/type_traits/<version>1.58.0+1
+   : @<include>../include
+   ;

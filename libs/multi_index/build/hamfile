@@ -1,6 +1,25 @@
 project "boost/multi_index" : requirements <version>1.58.0+1 ;
 
 header-lib boost.multi_index 
-   : /boost/foreach/<version>1.58.0+1
+   :
+     /boost/assert/<version>1.58.0+1
+     /boost/bind/<version>1.58.0+1
+     /boost/config/<version>1.58.0+1
+     /boost/core/<version>1.58.0+1
+     /boost/detail/<version>1.58.0+1
+     /boost/foreach/<version>1.58.0+1
+     /boost/functional/<version>1.58.0+1
+     /boost/integer/<version>1.58.0+1
+     /boost/iterator/<version>1.58.0+1
+     /boost/move/<version>1.58.0+1
+     /boost/mpl/<version>1.58.0+1
+     /boost/preprocessor/<version>1.58.0+1
+     /boost/serialization/<version>1.58.0+1
+     /boost/smart_ptr/<version>1.58.0+1
+     /boost/static_assert/<version>1.58.0+1
+     /boost/throw_exception/<version>1.58.0+1
+     /boost/tuple/<version>1.58.0+1
+     /boost/type_traits/<version>1.58.0+1
+     /boost/utility/<version>1.58.0+1
    : @<include>../include
    ;

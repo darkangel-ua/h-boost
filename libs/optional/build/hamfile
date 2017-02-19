@@ -2,6 +2,15 @@ project "boost/optional" : requirements <version>1.58.0+1 ;
 
 header-lib boost.optional 
    :
+     /boost/assert/<version>1.58.0+1
+     /boost/config/<version>1.58.0+1
+     /boost/core/<version>1.58.0+1
+     /boost/detail/<version>1.58.0+1
+     /boost/move/<version>1.58.0+1
+     /boost/mpl/<version>1.58.0+1
+     /boost/static_assert/<version>1.58.0+1
+     /boost/throw_exception/<version>1.58.0+1
+     /boost/type_traits/<version>1.58.0+1
+     /boost/utility/<version>1.58.0+1
    : @<include>../include
-   ; 
-   
+   ;

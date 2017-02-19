@@ -2,6 +2,7 @@ project "boost/iostreams" : requirements <version>1.58.0+1 ;
 
 lib boost.iostreams 
    : ../src/mapped_file.cpp
+     ../src/file_descriptor.cpp
      @/boost/assert/<version>1.58.0+1
      @/boost/bind/<version>1.58.0+1
      @/boost/config/<version>1.58.0+1

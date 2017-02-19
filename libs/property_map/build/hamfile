@@ -1,0 +1,25 @@
+project "boost/property_map" : requirements <version>1.58.0+1 ;
+
+header-lib boost.property_map 
+   :
+     /boost/any/<version>1.58.0+1
+     /boost/assert/<version>1.58.0+1
+     /boost/bind/<version>1.58.0+1
+     /boost/concept_check/<version>1.58.0+1
+     /boost/config/<version>1.58.0+1
+     /boost/core/<version>1.58.0+1
+     /boost/function/<version>1.58.0+1
+     /boost/iterator/<version>1.58.0+1
+     /boost/lexical_cast/<version>1.58.0+1
+     /boost/mpi/<version>1.58.0+1
+     /boost/mpl/<version>1.58.0+1
+     /boost/multi_index/<version>1.58.0+1
+     /boost/optional/<version>1.58.0+1
+     /boost/serialization/<version>1.58.0+1
+     /boost/smart_ptr/<version>1.58.0+1
+     /boost/static_assert/<version>1.58.0+1
+     /boost/throw_exception/<version>1.58.0+1
+     /boost/type_traits/<version>1.58.0+1
+     /boost/utility/<version>1.58.0+1
+   : @<include>../include
+   ;

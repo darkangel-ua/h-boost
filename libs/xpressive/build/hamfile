@@ -1,0 +1,27 @@
+project "boost/xpressive" : requirements <version>1.58.0+1 ;
+
+header-lib boost.xpressive 
+   :
+     /boost/assert/<version>1.58.0+1
+     /boost/config/<version>1.58.0+1
+     /boost/conversion/<version>1.58.0+1
+     /boost/core/<version>1.58.0+1
+     /boost/exception/<version>1.58.0+1
+     /boost/fusion/<version>1.58.0+1
+     /boost/integer/<version>1.58.0+1
+     /boost/iterator/<version>1.58.0+1
+     /boost/lexical_cast/<version>1.58.0+1
+     /boost/mpl/<version>1.58.0+1
+     /boost/numeric/conversion/<version>1.58.0+1
+     /boost/optional/<version>1.58.0+1
+     /boost/preprocessor/<version>1.58.0+1
+     /boost/proto/<version>1.58.0+1
+     /boost/range/<version>1.58.0+1
+     /boost/smart_ptr/<version>1.58.0+1
+     /boost/static_assert/<version>1.58.0+1
+     /boost/throw_exception/<version>1.58.0+1
+     /boost/type_traits/<version>1.58.0+1
+     /boost/typeof/<version>1.58.0+1
+     /boost/utility/<version>1.58.0+1
+   : @<include>../include
+   ;

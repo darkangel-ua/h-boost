@@ -1,7 +1,8 @@
 project "boost/lexical_cast" : requirements <version>1.58.0+1 ;
 
 header-lib boost.lexical_cast 
-   : /boost/array/<version>1.58.0+1
+   :
+     /boost/array/<version>1.58.0+1
      /boost/assert/<version>1.58.0+1
      /boost/config/<version>1.58.0+1
      /boost/container/<version>1.58.0+1
@@ -14,6 +15,5 @@ header-lib boost.lexical_cast
      /boost/static_assert/<version>1.58.0+1
      /boost/throw_exception/<version>1.58.0+1
      /boost/type_traits/<version>1.58.0+1
-     /boost/utility/<version>1.58.0+1
    : @<include>../include
    ;
