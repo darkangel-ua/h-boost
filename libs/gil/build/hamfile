@@ -1,0 +1,16 @@
+project "boost/gil" : requirements <version>1.58.0+1 ;
+
+header-lib boost.gil 
+   :
+     /boost/bind/<version>1.58.0+1
+     /boost/concept_check/<version>1.58.0+1
+     /boost/config/<version>1.58.0+1
+     /boost/core/<version>1.58.0+1
+     /boost/iterator/<version>1.58.0+1
+     /boost/mpl/<version>1.58.0+1
+     /boost/preprocessor/<version>1.58.0+1
+     /boost/smart_ptr/<version>1.58.0+1
+     /boost/static_assert/<version>1.58.0+1
+     /boost/type_traits/<version>1.58.0+1
+   : @<include>../include
+   ;

@@ -2,5 +2,11 @@ project "boost/foreach" : requirements <version>1.58.0+1 ;
 
 header-lib boost.foreach 
    :
+     /boost/config/<version>1.58.0+1
+     /boost/core/<version>1.58.0+1
+     /boost/iterator/<version>1.58.0+1
+     /boost/mpl/<version>1.58.0+1
+     /boost/range/<version>1.58.0+1
+     /boost/type_traits/<version>1.58.0+1
    : @<include>../include
    ;

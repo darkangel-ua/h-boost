@@ -1,5 +1,19 @@
 project boost : requirements <version>1.58.0+1 ;
 
+#use-project : libs//build ;
+use-project heap : libs/heap/build ;
+use-project graph : libs/graph/build ;
+use-project gil : libs/gil/build ;
+use-project geometry : libs/geometry/build ;
+use-project flyweight : libs/flyweight/build ;
+use-project endian : libs/endian/build ;
+use-project dynamic_bitset : libs/dynamic_bitset/build ;
+use-project disjoint_sets : libs/disjoint_sets/build ;
+use-project crc : libs/crc/build ;
+use-project convert : libs/convert/build ;
+use-project chrono/stopwatches : libs/chrono/stopwatches/build ;
+use-project chrono : libs/chrono/build ;
+use-project bimap : libs/bimap/build;
 use-project context : libs/context/build ;
 use-project coroutine : libs/coroutine/build ;
 use-project accumulators : libs/accumulators/build ;

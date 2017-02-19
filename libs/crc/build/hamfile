@@ -1,0 +1,8 @@
+project "boost/crc" : requirements <version>1.58.0+1 ;
+
+header-lib boost.crc 
+   :
+     /boost/config/<version>1.58.0+1
+     /boost/integer/<version>1.58.0+1
+   : @<include>../include
+   ;
