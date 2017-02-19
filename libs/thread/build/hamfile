@@ -3,13 +3,14 @@ project "boost/thread" : requirements <version>1.58.0+1 ;
 searched-shared-lib pthread : : pthread ;                                                                  
 explicit pthread ; 
 
+local
 alias src 
    : ../src/win32/thread.cpp 
      ../src/win32/tss_dll.cpp                                                     
      ../src/win32/tss_pe.cpp                                                                     
    : <host-os>windows 
    ;
-
+local
 alias src
    : ../src/pthread/thread.cpp 
      ../src/pthread/once.cpp                                                                    
@@ -50,4 +51,5 @@ lib boost.thread
    : @<include>../include
      @<link>static:<define>BOOST_THREAD_BUILD_LIB=1                                                        
      @<link>shared:<define>BOOST_THREAD_BUILD_DLL=1
+     @<define>BOOST_THREAD_NO_LIB
    ;

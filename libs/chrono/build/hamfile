@@ -1,20 +1,26 @@
 project "boost/chrono" : requirements <version>1.58.0+1 ;
 
-header-lib boost.chrono 
-   : /boost/assert/<version>1.58.0+1
-     /boost/config/<version>1.58.0+1
-     /boost/core/<version>1.58.0+1
-     /boost/integer/<version>1.58.0+1
-     /boost/move/<version>1.58.0+1
-     /boost/mpl/<version>1.58.0+1
-     /boost/predef/<version>1.58.0+1
-     /boost/ratio/<version>1.58.0+1
-     /boost/static_assert/<version>1.58.0+1
-     /boost/system/<version>1.58.0+1
-     /boost/throw_exception/<version>1.58.0+1
-     /boost/type_traits/<version>1.58.0+1
-     /boost/typeof/<version>1.58.0+1
-     /boost/utility/<version>1.58.0+1
-     /boost/winapi/<version>1.58.0+1 
+lib boost.chrono 
+   : ../src/chrono.cpp
+     ../src/thread_clock.cpp
+     ../src/process_cpu_clocks.cpp
+     @/boost/assert/<version>1.58.0+1
+     @/boost/config/<version>1.58.0+1
+     @/boost/core/<version>1.58.0+1
+     @/boost/integer/<version>1.58.0+1
+     @/boost/move/<version>1.58.0+1
+     @/boost/mpl/<version>1.58.0+1
+     @/boost/predef/<version>1.58.0+1
+     @/boost/ratio/<version>1.58.0+1
+     @/boost/static_assert/<version>1.58.0+1
+     @/boost/system/<version>1.58.0+1
+     @/boost/throw_exception/<version>1.58.0+1
+     @/boost/type_traits/<version>1.58.0+1
+     @/boost/typeof/<version>1.58.0+1
+     @/boost/utility/<version>1.58.0+1
+     @/boost/winapi/<version>1.58.0+1 
    : @<include>../include
+     @<link>shared:<define>BOOST_CHRONO_DYN_LINK
+     @<link>static:<define>BOOST_CHRONO_STATIC_LINK
+     @<define>BOOST_CHRONO_NO_LIB
    ;

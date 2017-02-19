@@ -16,4 +16,5 @@ lib boost.regex
      @/boost/type_traits/<version>1.58.0+1
    : @<include>../include
      @<link>shared:<define>BOOST_REGEX_DYN_LINK=1
+     @<define>BOOST_REGEX_NO_LIB
    ;

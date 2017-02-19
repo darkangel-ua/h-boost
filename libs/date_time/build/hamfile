@@ -20,6 +20,7 @@ lib boost.date_time
      @/boost/utility/<version>1.58.0+1
    : @<include>../include
      @<define>DATE_TIME_INLINE                                                                           
-     @<link>shared:<define>BOOST_ALL_DYN_LINK=1                                                          
+     @<link>shared:<define>BOOST_DATE_TIME_DYN_LINK                                                          
      @<link>static:<define>BOOST_DATE_TIME_STATIC_LINK
+     @<define>BOOST_DATE_TIME_NO_LIB
    ;
