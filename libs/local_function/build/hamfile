@@ -1,4 +1,4 @@
-project "boost/local_function" : requirements <version>1.58.0+1 ;
+project "boost/local_function" : requirements = <version>1.58.0+1 ;
 
 header-lib boost.local_function 
    :

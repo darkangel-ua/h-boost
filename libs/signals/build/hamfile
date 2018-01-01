@@ -1,4 +1,4 @@
-project "boost/signals" : requirements <version>1.58.0+1 ;
+project "boost/signals" : requirements = <version>1.58.0+1 ;
 
 lib boost.signals 
    :
@@ -14,6 +14,6 @@ lib boost.signals
      @/boost/type_traits/<version>1.58.0+1
      @/boost/utility/<version>1.58.0+1
    : @<include>../include
-     <define>BOOST_SIGNALS_NO_LIB=1
-     <link>shared:<define>BOOST_SIGNALS_DYN_LINK=1
+     <define>"BOOST_SIGNALS_NO_LIB=1"
+     (<link>shared -> <define>"BOOST_SIGNALS_DYN_LINK=1")
    ;

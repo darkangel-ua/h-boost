@@ -1,4 +1,4 @@
-project boost : requirements <version>1.58.0+1 ;
+project boost;
 
 use-project accumulators : libs/accumulators/build ;
 use-project algorithm : libs/algorithm/build ;

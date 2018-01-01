@@ -1,4 +1,5 @@
-project "boost/serialization" : requirements <version>1.58.0+1 ;
+
+project "boost/serialization" : requirements = <version>1.58.0+1 ;
 
 lib boost.serialization 
    : ../src/basic_archive.cpp
@@ -51,6 +52,6 @@ lib boost.serialization
       #<toolset>gcc:<cxxflags>"-fvisibility-inlines-hidden"
       #<toolset>darwin:<cxxflags>"-fvisibility=hidden"
       #<toolset>darwin:<cxxflags>"-fvisibility-inlines-hidden"
-     @<link>shared:<define>BOOST_SERIALIZATION_DYN_LINK=1
+     @(<link>shared -> <define>"BOOST_SERIALIZATION_DYN_LINK=1")
      @<define>BOOST_SERIALIZATION_NO_LIB
    ;

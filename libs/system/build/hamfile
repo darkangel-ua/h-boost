@@ -1,4 +1,4 @@
-project "boost/system" : requirements <version>1.58.0+1 ;
+project "boost/system" : requirements = <version>1.58.0+1 ;
 
 lib boost.system 
    : ../src/error_code.cpp
@@ -8,7 +8,7 @@ lib boost.system
      @/boost/predef/<version>1.58.0+1
    : @<include>../include
       <define>BOOST_SYSTEM_SOURCE
-     @<link>shared:<define>BOOST_SYSTEM_DYN_LINK=1                                                         
-     @<link>static:<define>BOOST_SYSTEM_STATIC_LINK=1
+     @(<link>shared -> <define>"BOOST_SYSTEM_DYN_LINK=1")
+     @(<link>static -> <define>"BOOST_SYSTEM_STATIC_LINK=1")
      @<define>BOOST_SYSTEM_NO_LIB
    ;

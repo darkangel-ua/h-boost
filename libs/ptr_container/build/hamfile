@@ -1,4 +1,4 @@
-project "boost/ptr_container" : requirements <version>1.58.0+1 ;
+project "boost/ptr_container" : requirements = <version>1.58.0+1 ;
 
 header-lib boost.ptr_container 
    : /boost/array/<version>1.58.0+1

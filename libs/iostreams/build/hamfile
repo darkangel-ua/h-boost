@@ -1,4 +1,4 @@
-project "boost/iostreams" : requirements <version>1.58.0+1 ;
+project "boost/iostreams" : requirements = <version>1.58.0+1 ;
 
 lib boost.iostreams 
    : ../src/mapped_file.cpp
@@ -22,6 +22,6 @@ lib boost.iostreams
      @/boost/utility/<version>1.58.0+1
    : @<include>../include
       <define>BOOST_IOSTREAMS_USE_DEPRECATED
-     @<link>shared:<define>BOOST_IOSTREAMS_DYN_LINK=1
+     @(<link>shared -> <define>"BOOST_IOSTREAMS_DYN_LINK=1")
      @<define>BOOST_IOSTREAMS_NO_LIB
    ;

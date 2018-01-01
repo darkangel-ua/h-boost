@@ -1,4 +1,4 @@
-project "boost/graph" : requirements <version>1.58.0+1 ;
+project "boost/graph" : requirements = <version>1.58.0+1 ;
 
 lib boost.graph 
    :
@@ -48,5 +48,5 @@ lib boost.graph
      /boost/utility/<version>1.58.0+1
      /boost/xpressive/<version>1.58.0+1
    : @<include>../include
-     <link>shared:<define>BOOST_GRAPH_DYN_LINK=1
+     (<link>shared -> <define>"BOOST_GRAPH_DYN_LINK=1")
    ;

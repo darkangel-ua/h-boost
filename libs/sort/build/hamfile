@@ -1,4 +1,4 @@
-project "boost/sort" : requirements <version>1.58.0+1 ;
+project "boost/sort" : requirements = <version>1.58.0+1 ;
 
 header-lib boost.sort 
    :

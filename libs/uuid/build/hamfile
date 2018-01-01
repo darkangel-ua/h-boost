@@ -1,4 +1,4 @@
-project "boost/uuid" : requirements <version>1.58.0+1 ;
+project "boost/uuid" : requirements = <version>1.58.0+1 ;
 
 header-lib boost.uuid 
    :

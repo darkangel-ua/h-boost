@@ -1,15 +1,16 @@
+
 project "boost/test"
-   : requirements
+   : requirements =
          <version>1.58.0+1
         @<include>../include
 # if uncommented will work wrong because of undefined order of evaluation 
 # for conditional features
 #        @<link>shared:<define>BOOST_TEST_DYN_LINK=1
         @<define>BOOST_TEST_NO_LIB
-        <toolset>msvc:<asynch-exceptions>on
+        (<toolset>msvc -> <asynch-exceptions>on)
    ;
     
-#local
+local
 alias base_sources
    :
   ../src/compiler_log_formatter.cpp
@@ -32,9 +33,8 @@ alias base_sources
   ../src/xml_log_formatter.cpp
   ../src/xml_report_formatter.cpp
    ;
-explicit base_sources ;
 
-#local
+local
 alias dependencies 
    :
      @/boost/bind/<version>1.58.0+1
@@ -55,8 +55,8 @@ alias dependencies
      @/boost/type_traits/<version>1.58.0+1
      @/boost/utility/<version>1.58.0+1
    ;
-explicit dependencies ;
 
+explicit
 lib utf
    :
      base_sources
@@ -65,14 +65,13 @@ lib utf
     <link>static
    ;
 
-explicit utf ;
-
+explicit
 header-lib boost.test.minimal 
    :
     /boost/smart_ptr/<version>1.58.0+1 
    ;
-explicit boost.test.minimal ;
 
+explicit
 lib boost.test.execution_monitor 
    :
     base_sources
@@ -81,5 +80,3 @@ lib boost.test.execution_monitor
    :
     <link>static
    ;
-
-explicit boost.test.execution_monitor ;

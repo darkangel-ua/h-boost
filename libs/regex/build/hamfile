@@ -1,4 +1,4 @@
-project "boost/regex" : requirements <version>1.58.0+1 ;
+project "boost/regex" : requirements = <version>1.58.0+1 ;
 
 lib boost.regex 
    : [ glob ../src/*.cpp ]
@@ -15,6 +15,6 @@ lib boost.regex
      @/boost/throw_exception/<version>1.58.0+1
      @/boost/type_traits/<version>1.58.0+1
    : @<include>../include
-     @<link>shared:<define>BOOST_REGEX_DYN_LINK=1
+     @(<link>shared -> <define>"BOOST_REGEX_DYN_LINK=1")
      @<define>BOOST_REGEX_NO_LIB
    ;

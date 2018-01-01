@@ -1,4 +1,4 @@
-project "boost/pool" : requirements <version>1.58.0+1 ;
+project "boost/pool" : requirements = <version>1.58.0+1 ;
 
 header-lib boost.pool 
    :
