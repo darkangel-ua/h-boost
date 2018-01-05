@@ -1,4 +1,4 @@
-project "boost/functional" : requirements = <version>1.58.0+1 ;
+project boost/functional : requirements = <version>1.58.0+1 ;
 
 header-lib boost.functional 
    : /boost/assert/<version>1.58.0+1

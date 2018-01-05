@@ -1,4 +1,4 @@
-project "boost/circular_buffer" : requirements = <version>1.58.0+1 ;
+project boost/circular_buffer : requirements = <version>1.58.0+1 ;
 
 header-lib boost.circular_buffer 
    : /boost/assert/<version>1.58.0+1

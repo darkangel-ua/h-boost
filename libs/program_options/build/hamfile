@@ -1,4 +1,4 @@
-project "boost/program_options" : requirements = <version>1.58.0+1 ;
+project boost/program_options : requirements = <version>1.58.0+1 ;
 
 lib boost.program_options 
    : [ glob ../src/*.cpp ]

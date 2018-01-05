@@ -1,4 +1,4 @@
-project "boost/thread" : requirements = <version>1.58.0+1 ;
+project boost/thread : requirements = <version>1.58.0+1 ;
 
 explicit
 searched-shared-lib pthread : : pthread ;                                                                  

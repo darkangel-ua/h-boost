@@ -1,4 +1,4 @@
-project "boost/filesystem" : requirements = <version>1.58.0+1 ;
+project boost/filesystem : requirements = <version>1.58.0+1 ;
 
 lib boost.filesystem 
    : [ glob ../src/*.cpp ] 

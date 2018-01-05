@@ -1,5 +1,4 @@
-
-project "boost/test"
+project boost/test
    : requirements =
          <version>1.58.0+1
         @<include>../include

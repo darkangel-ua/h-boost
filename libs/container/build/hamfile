@@ -1,4 +1,4 @@
-project "boost/container" : requirements = <version>1.58.0+1 ;
+project boost/container : requirements = <version>1.58.0+1 ;
 
 header-lib boost.container 
    : /boost/assert/<version>1.58.0+1

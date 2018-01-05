@@ -1,4 +1,4 @@
-project "boost/iostreams" : requirements = <version>1.58.0+1 ;
+project boost/iostreams : requirements = <version>1.58.0+1 ;
 
 lib boost.iostreams 
    : ../src/mapped_file.cpp

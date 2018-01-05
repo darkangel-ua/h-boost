@@ -1,4 +1,4 @@
-project "boost/iterator" : requirements = <version>1.58.0+1 ;
+project boost/iterator : requirements = <version>1.58.0+1 ;
 
 header-lib boost.iterator 
    : /boost/assert/<version>1.58.0+1

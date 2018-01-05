@@ -1,4 +1,4 @@
-project "boost/chrono" : requirements = <version>1.58.0+1 ;
+project boost/chrono : requirements = <version>1.58.0+1 ;
 
 lib boost.chrono 
    : ../src/chrono.cpp

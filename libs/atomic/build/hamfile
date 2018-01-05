@@ -1,4 +1,4 @@
-project "boost/atomic" : requirements = <version>1.58.0+1 ;
+project boost/atomic : requirements = <version>1.58.0+1 ;
 
 header-lib boost.atomic 
    : /boost/assert/<version>1.58.0+1

@@ -1,4 +1,4 @@
-project "boost/smart_ptr" : requirements = <version>1.58.0+1 ;
+project boost/smart_ptr : requirements = <version>1.58.0+1 ;
 
 header-lib boost.smart_ptr 
    : /boost/align/<version>1.58.0+1
