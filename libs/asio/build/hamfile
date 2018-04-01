@@ -1,7 +1,16 @@
 project boost/asio : requirements = <version>1.58.0+1 ;
 
+local
+alias sockets ;
+
+local 
+searched-static-lib sockets : : Ws2_32 : <target-os>windows <host-os>linux ;
+local 
+searched-static-lib sockets : : Ws2_32.lib : <target-os>windows <host-os>windows ;
+
 header-lib boost.asio  
    :
+     sockets
      /boost/array/<version>1.58.0+1
      /boost/assert/<version>1.58.0+1
      /boost/bind/<version>1.58.0+1

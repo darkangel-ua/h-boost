@@ -1,6 +1,6 @@
 project boost/thread : requirements = <version>1.58.0+1 ;
 
-explicit
+local
 searched-shared-lib pthread : : pthread ;                                                                  
 
 local
@@ -8,7 +8,7 @@ alias src
    : ../src/win32/thread.cpp 
      ../src/win32/tss_dll.cpp                                                     
      ../src/win32/tss_pe.cpp                                                                     
-   : <host-os>windows 
+   : <target-os>windows 
    ;
 
 local
@@ -16,7 +16,7 @@ alias src
    : ../src/pthread/thread.cpp 
      ../src/pthread/once.cpp                                                                    
      pthread 
-   : <host-os>linux 
+   : <target-os>linux 
    ;
 
 lib boost.thread 
