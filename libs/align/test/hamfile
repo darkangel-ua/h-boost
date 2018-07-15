@@ -1,11 +1,15 @@
-test-suite aling : 
-   [ testing.run align_test.cpp ]
-   [ testing.run aligned_alloc_test.cpp ] 
-   [ testing.run aligned_allocator_test.cpp ]
-   [ testing.run aligned_allocator_adaptor_test.cpp ]
-   [ testing.run aligned_delete_test.cpp ]
-   [ testing.run alignment_of_test.cpp ]
-   [ testing.run is_aligned_test.cpp ]
- : 
-  /boost/align/<version>1.58.0+1
- ;
+testing.suite boost.aling.tests 
+   : sources =
+      [ testing.run align_test.cpp ]
+      [ testing.run align_down_test.cpp ]
+      [ testing.run align_up_test.cpp ]
+      [ testing.run aligned_alloc_test.cpp ]
+      [ testing.run aligned_allocator_test.cpp ]
+      [ testing.run aligned_allocator_adaptor_test.cpp ]
+      [ testing.run aligned_delete_test.cpp ]
+      [ testing.run alignment_of_test.cpp ]
+      [ testing.run assume_aligned_test.cpp ]
+      [ testing.run is_aligned_test.cpp ]
+   : common-sources =
+      /boost/align/<version>1.67.0
+   ;

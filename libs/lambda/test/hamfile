@@ -1,0 +1,28 @@
+project 
+    : requirements = 
+       (<toolset>msvc -> <asynch-exceptions>on)
+    ;
+          
+testing.suite boost.lambda.tests
+    : sources =
+       [ testing.run algorithm_test.cpp ]
+       [ testing.run bind_tests_simple.cpp ]
+       [ testing.run bind_tests_advanced.cpp ]
+       [ testing.run bind_tests_simple_f_refs.cpp ]
+       [ testing.run bll_and_function.cpp ]
+       [ testing.run sources = cast_test.cpp 
+                   : name = lambda_cast_test ]
+       [ testing.run constructor_tests.cpp ]
+       [ testing.run control_structures.cpp ]
+       [ testing.run exception_test.cpp ]
+       [ testing.run extending_rt_traits.cpp ]
+       [ testing.run is_instance_of_test.cpp ]
+       [ testing.run member_pointer_test.cpp ]
+       [ testing.run operator_tests_simple.cpp ]
+       [ testing.run phoenix_control_structures.cpp ]
+       [ testing.run switch_construct.cpp ]
+       [ testing.run result_of_tests.cpp ]
+       [ testing.run ret_test.cpp ]
+    : common-sources =
+       /boost/lambda/<version>1.67.0
+    ;      

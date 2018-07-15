@@ -1,0 +1,9 @@
+testing.suite boost.heap.tests 
+   : sources =
+      [ testing.run-many 
+             sources = [ glob ./*.cpp ] 
+           : requirements = <threading>multi ]
+   : common-sources =
+      /boost/heap/<version>1.67.0
+      /boost/test//utf/<version>1.67.0
+   ;

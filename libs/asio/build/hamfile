@@ -1,29 +1,34 @@
-project boost/asio : requirements = <version>1.58.0+1 ;
+project boost/asio 
+   : requirements =
+      <version>1.67.0 
+   ;
 
 local
 alias sockets ;
 
 local 
-searched-static-lib sockets : : Ws2_32 : <target-os>windows <host-os>linux ;
-local 
-searched-static-lib sockets : : Ws2_32.lib : <target-os>windows <host-os>windows ;
+searched-static-lib sockets : libname = Ws2_32 : requirements = <target-os>windows <host-os>linux ;
 
-header-lib boost.asio  
-   :
-     sockets
-     /boost/array/<version>1.58.0+1
-     /boost/assert/<version>1.58.0+1
-     /boost/bind/<version>1.58.0+1
-     /boost/chrono/<version>1.58.0+1
-     /boost/config/<version>1.58.0+1
-     /boost/core/<version>1.58.0+1
-     /boost/coroutine/<version>1.58.0+1
-     /boost/date_time/<version>1.58.0+1
-     /boost/function/<version>1.58.0+1
-     /boost/regex/<version>1.58.0+1
-     /boost/smart_ptr/<version>1.58.0+1
-     /boost/system/<version>1.58.0+1
-     /boost/throw_exception/<version>1.58.0+1
-     /boost/type_traits/<version>1.58.0+1
-   : @<include>../include
+local 
+searched-static-lib sockets : libname = Ws2_32.lib : requirements = <target-os>windows <host-os>windows ;
+
+header-lib boost.asio
+   : sources =
+      sockets
+      /boost/array/<version>1.67.0
+      /boost/assert/<version>1.67.0
+      /boost/bind/<version>1.67.0
+      /boost/chrono/<version>1.67.0
+      /boost/config/<version>1.67.0
+      /boost/core/<version>1.67.0
+      /boost/coroutine/<version>1.67.0
+      /boost/date_time/<version>1.67.0
+      /boost/function/<version>1.67.0
+      /boost/regex/<version>1.67.0
+      /boost/smart_ptr/<version>1.67.0
+      /boost/system/<version>1.67.0
+      /boost/throw_exception/<version>1.67.0
+      /boost/type_traits/<version>1.67.0
+   : usage-requirements =
+      <include>../include
    ;

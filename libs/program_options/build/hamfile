@@ -1,20 +1,25 @@
-project boost/program_options : requirements = <version>1.58.0+1 ;
+project boost/program_options 
+   : requirements =
+      <version>1.67.0 
+   ;
 
 lib boost.program_options 
-   : [ glob ../src/*.cpp ]
-     @/boost/any/<version>1.58.0+1
-     @/boost/config/<version>1.58.0+1
-     @/boost/core/<version>1.58.0+1
-     @/boost/detail/<version>1.58.0+1
-     @/boost/function/<version>1.58.0+1
-     @/boost/iterator/<version>1.58.0+1
-     @/boost/lexical_cast/<version>1.58.0+1
-     @/boost/smart_ptr/<version>1.58.0+1
-     @/boost/static_assert/<version>1.58.0+1
-     @/boost/throw_exception/<version>1.58.0+1
-      /boost/tokenizer/<version>1.58.0+1
-     @/boost/type_traits/<version>1.58.0+1
-   : @<include>../include
+   : sources =
+      [ glob ../src/*.cpp ]
+      @/boost/any/<version>1.67.0
+      @/boost/config/<version>1.67.0
+      @/boost/core/<version>1.67.0
+      @/boost/detail/<version>1.67.0
+      @/boost/function/<version>1.67.0
+      @/boost/iterator/<version>1.67.0
+      @/boost/lexical_cast/<version>1.67.0
+      @/boost/smart_ptr/<version>1.67.0
+      @/boost/static_assert/<version>1.67.0
+      @/boost/throw_exception/<version>1.67.0
+       /boost/tokenizer/<version>1.67.0
+      @/boost/type_traits/<version>1.67.0
+   : requirements =
+     @<include>../include
      @(<link>shared -> <define>"BOOST_PROGRAM_OPTIONS_DYN_LINK=1")
      @<define>BOOST_PROGRAM_OPTIONS_NO_LIB
    ;

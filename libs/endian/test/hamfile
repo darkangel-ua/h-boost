@@ -1,0 +1,14 @@
+project
+   : requirements =
+      (<toolset>msvc -> <asynch-exceptions>on)
+   ;
+   
+testing.suite boost.endian.tests
+   : sources =
+      [ testing.run buffer_test.cpp ]
+      [ testing.run endian_test.cpp ]
+      [ testing.run endian_operations_test.cpp ]
+      [ testing.run endian_in_union_test.cpp ]
+      [ testing.run conversion_test.cpp ]
+#     [ testing.run floating_point_test.cpp ]
+   ;

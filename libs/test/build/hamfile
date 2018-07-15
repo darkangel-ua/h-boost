@@ -1,6 +1,6 @@
 project boost/test
    : requirements =
-         <version>1.58.0+1
+         <version>1.67.0
         @<include>../include
 # if uncommented will work wrong because of undefined order of evaluation 
 # for conditional features
@@ -55,8 +55,8 @@ alias dependencies
      @/boost/utility/<version>1.58.0+1
    ;
 
-explicit
-lib utf
+local
+lib boost.test.utf
    :
      base_sources
      dependencies
@@ -64,13 +64,13 @@ lib utf
     <link>static
    ;
 
-explicit
+local
 header-lib boost.test.minimal 
    :
     /boost/smart_ptr/<version>1.58.0+1 
    ;
 
-explicit
+local
 lib boost.test.execution_monitor 
    :
     base_sources
@@ -79,3 +79,7 @@ lib boost.test.execution_monitor
    :
     <link>static
    ;
+
+explicit alias minimal : boost.test.minimal/<version>1.67.0 ;
+explicit alias utf : boost.test.utf/<version>1.67.0 ;
+explicit alias execution_monitor : boost.test.execution_monitor/<version>1.67.0 ;

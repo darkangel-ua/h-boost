@@ -1,0 +1,17 @@
+project boost/poly_collection
+   : requirements =
+      <version>1.67.0
+   ;
+
+header-lib boost.poly_collection
+   : sources =
+      /boost/assert/<version>1.67.0
+      /boost/config/<version>1.67.0
+      /boost/core/<version>1.67.0
+      /boost/iterator/<version>1.67.0
+      /boost/mpl/<version>1.67.0
+      /boost/type_erasure/<version>1.67.0
+      /boost/type_traits/<version>1.67.0
+   : requirements =
+      @<include>../include
+   ;

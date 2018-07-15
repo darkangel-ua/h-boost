@@ -1,19 +1,23 @@
-project boost/unordered : requirements = <version>1.58.0+1 ;
+project boost/unordered 
+   : requirements =
+      <version>1.67.0 
+   ;
 
-header-lib boost.unordered 
-   :
-     /boost/assert/<version>1.58.0+1
-     /boost/config/<version>1.58.0+1
-     /boost/container/<version>1.58.0+1
-     /boost/core/<version>1.58.0+1
-     /boost/detail/<version>1.58.0+1
-     /boost/functional/<version>1.58.0+1
-     /boost/iterator/<version>1.58.0+1
-     /boost/move/<version>1.58.0+1
-     /boost/preprocessor/<version>1.58.0+1
-     /boost/smart_ptr/<version>1.58.0+1
-     /boost/throw_exception/<version>1.58.0+1
-     /boost/tuple/<version>1.58.0+1
-     /boost/type_traits/<version>1.58.0+1
-   : @<include>../include
+header-lib boost.unordered
+   : sources =
+      /boost/assert/<version>1.67.0
+      /boost/config/<version>1.67.0
+      /boost/container/<version>1.67.0
+      /boost/container_hash/<version>1.67.0
+      /boost/core/<version>1.67.0
+      /boost/detail/<version>1.67.0
+      /boost/move/<version>1.67.0
+      /boost/predef/<version>1.67.0
+      /boost/preprocessor/<version>1.67.0
+      /boost/smart_ptr/<version>1.67.0
+      /boost/throw_exception/<version>1.67.0
+      /boost/tuple/<version>1.67.0
+      /boost/type_traits/<version>1.67.0
+   : requirements =
+      @<include>../include
    ;

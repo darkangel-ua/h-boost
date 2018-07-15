@@ -1,13 +1,19 @@
-project boost/type_index : requirements = <version>1.58.0+1 ;
+project boost/type_index 
+   : requirements =
+      <version>1.67.0 
+   ;
 
 header-lib boost.type_index 
-   : /boost/config/<version>1.58.0+1
-     /boost/core/<version>1.58.0+1
-     /boost/functional/<version>1.58.0+1
-     /boost/mpl/<version>1.58.0+1
-     /boost/preprocessor/<version>1.58.0+1
-     /boost/static_assert/<version>1.58.0+1
-     /boost/throw_exception/<version>1.58.0+1
-     /boost/type_traits/<version>1.58.0+1 
-   : @<include>../include
+   : sources = 
+      /boost/config/<version>1.67.0
+      /boost/container_hash/<version>1.67.0
+      /boost/core/<version>1.67.0
+      /boost/mpl/<version>1.67.0
+      /boost/preprocessor/<version>1.67.0
+      /boost/smart_ptr/<version>1.67.0
+      /boost/static_assert/<version>1.67.0
+      /boost/throw_exception/<version>1.67.0
+      /boost/type_traits/<version>1.67.0 
+   : requirements =
+      @<include>../include
    ;

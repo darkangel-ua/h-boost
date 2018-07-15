@@ -1,8 +1,12 @@
-project boost/crc : requirements = <version>1.58.0+1 ;
+project boost/crc 
+   : requirements = 
+      <version>1.67.0 
+   ;
 
-header-lib boost.crc 
-   :
-     /boost/config/<version>1.58.0+1
-     /boost/integer/<version>1.58.0+1
-   : @<include>../include
+header-lib boost.crc
+   : sources =
+      /boost/config/<version>1.67.0
+      /boost/integer/<version>1.67.0
+   : requirements =
+      @<include>../include
    ;

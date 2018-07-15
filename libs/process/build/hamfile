@@ -1,0 +1,23 @@
+project boost/process
+   : requirements =
+      <version>1.67.0
+   ;
+
+header-lib boost.process
+   : sources =
+      /boost/algorithm/<version>1.67.0
+      /boost/asio/<version>1.67.0
+      /boost/config/<version>1.67.0
+      /boost/core/<version>1.67.0
+      /boost/filesystem/<version>1.67.0
+      /boost/fusion/<version>1.67.0
+      /boost/iterator/<version>1.67.0
+      /boost/move/<version>1.67.0
+      /boost/optional/<version>1.67.0
+      /boost/system/<version>1.67.0
+      /boost/tokenizer/<version>1.67.0
+      /boost/type_index/<version>1.67.0
+      /boost/winapi/<version>1.67.0
+   : usage-requirements =
+      <include>../include
+   ;

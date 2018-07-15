@@ -1,0 +1,22 @@
+testing.suite boost.concept_check.tests
+   : sources =
+      [ testing.run stl_concept_covering.cpp ]
+      [ testing.run stl_concept_check.cpp ]
+      [ testing.run concept_check_test.cpp  ]
+      [ testing.run class_concept_check_test.cpp ]
+      [ testing.compile-fail concept_check_fail_expected.cpp ]
+      [ testing.compile-fail class_concept_fail_expected.cpp ]
+      
+      [ testing.run where.cpp ]
+      [ testing.compile-fail where_fail.cpp ]
+      [ testing.compile-fail usage_fail.cpp ]
+      
+      # Backward compatibility tests
+      [ testing.run old_concept_pass.cpp ]
+      [ testing.compile-fail function_requires_fail.cpp ]
+      [ testing.compile-fail old_concept_function_fail.cpp ]
+      [ testing.compile-fail old_concept_class_fail.cpp ]
+  : common-sources =
+     /boost/concept_check/<version>1.67.0
+  ;
+

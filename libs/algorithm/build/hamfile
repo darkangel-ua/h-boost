@@ -1,22 +1,27 @@
-
-project boost/algorithm : requirements = <version>1.58.0+1 ;
+project boost/algorithm 
+   : requirements =
+      <version>1.67.0 
+   ;
 
 header-lib boost.algorithm 
-   : /boost/array/<version>1.58.0+1
-     /boost/assert/<version>1.58.0+1
-     /boost/bind/<version>1.58.0+1
-     /boost/concept_check/<version>1.58.0+1
-     /boost/config/<version>1.58.0+1
-     /boost/core/<version>1.58.0+1
-     /boost/exception/<version>1.58.0+1
-     /boost/function/<version>1.58.0+1
-     /boost/iterator/<version>1.58.0+1
-     /boost/mpl/<version>1.58.0+1
-     /boost/range/<version>1.58.0+1
-     /boost/regex/<version>1.58.0+1
-     /boost/static_assert/<version>1.58.0+1
-     /boost/tuple/<version>1.58.0+1
-     /boost/type_traits/<version>1.58.0+1
-     /boost/unordered/<version>1.58.0+1
-   : @<include>../include
+   : sources =
+      /boost/array/<version>1.67.0
+      /boost/assert/<version>1.67.0
+      /boost/bind/<version>1.67.0
+      /boost/concept_check/<version>1.67.0
+      /boost/config/<version>1.67.0
+      /boost/core/<version>1.67.0
+      /boost/exception/<version>1.67.0
+      /boost/function/<version>1.67.0
+      /boost/iterator/<version>1.67.0
+      /boost/mpl/<version>1.67.0
+      /boost/range/<version>1.67.0
+      /boost/regex/<version>1.67.0
+      /boost/static_assert/<version>1.67.0
+      /boost/throw_exception/<version>1.67.0
+      /boost/tuple/<version>1.67.0
+      /boost/type_traits/<version>1.67.0
+      /boost/unordered/<version>1.67.0
+   : requirements =
+      @<include>../include
    ;

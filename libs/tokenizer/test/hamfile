@@ -1,0 +1,9 @@
+testing.suite boost.tokenizer.tests
+   : sources
+      [ testing.run examples.cpp /boost/test//boost_test_exec_monitor/<version>1.67.0/<link>static ]
+      [ testing.run simple_example_1.cpp ]
+      [ testing.run simple_example_2.cpp ]
+      [ testing.run simple_example_3.cpp ]
+      [ testing.run simple_example_4.cpp ]
+      [ testing.run simple_example_5.cpp ]
+   ;

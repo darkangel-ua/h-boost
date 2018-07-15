@@ -1,57 +1,63 @@
+project boost/serialization 
+   : requirements =
+      <version>1.67.0 
+   ;
 
-project boost/serialization : requirements = <version>1.58.0+1 ;
-
-lib boost.serialization 
-   : ../src/basic_archive.cpp
-     ../src/basic_iarchive.cpp
-     ../src/basic_iserializer.cpp
-     ../src/basic_oarchive.cpp
-     ../src/basic_oserializer.cpp
-     ../src/basic_pointer_iserializer.cpp
-     ../src/basic_pointer_oserializer.cpp
-     ../src/basic_serializer_map.cpp
-     ../src/basic_text_iprimitive.cpp
-     ../src/basic_text_oprimitive.cpp
-     ../src/basic_xml_archive.cpp
-     ../src/binary_iarchive.cpp
-     ../src/binary_oarchive.cpp
-     ../src/extended_type_info.cpp
-     ../src/extended_type_info_typeid.cpp
-     ../src/extended_type_info_no_rtti.cpp
-     ../src/polymorphic_iarchive.cpp
-     ../src/polymorphic_oarchive.cpp
-     ../src/stl_port.cpp
-     ../src/text_iarchive.cpp
-     ../src/text_oarchive.cpp
-     ../src/void_cast.cpp
-     ../src/archive_exception.cpp
-     ../src/xml_grammar.cpp
-     ../src/xml_iarchive.cpp
-     ../src/xml_oarchive.cpp
-     ../src/xml_archive_exception.cpp
-     @/boost/array/<version>1.58.0+1
-     @/boost/assert/<version>1.58.0+1
-     @/boost/config/<version>1.58.0+1
-     @/boost/core/<version>1.58.0+1
-     @/boost/detail/<version>1.58.0+1
-     @/boost/integer/<version>1.58.0+1
-     @/boost/io/<version>1.58.0+1
-     @/boost/iterator/<version>1.58.0+1
-     @/boost/mpl/<version>1.58.0+1
-     @/boost/optional/<version>1.58.0+1
-     @/boost/predef/<version>1.58.0+1
-     @/boost/preprocessor/<version>1.58.0+1
-     @/boost/smart_ptr/<version>1.58.0+1
-     @/boost/spirit/<version>1.58.0+1           
-     @/boost/static_assert/<version>1.58.0+1
-     @/boost/type_traits/<version>1.58.0+1
-     @/boost/utility/<version>1.58.0+1
-     @/boost/variant/<version>1.58.0+1
-   : @<include>../include
+lib boost.serialization
+   : sources =
+      ../src/basic_archive.cpp
+      ../src/basic_iarchive.cpp
+      ../src/basic_iserializer.cpp
+      ../src/basic_oarchive.cpp
+      ../src/basic_oserializer.cpp
+      ../src/basic_pointer_iserializer.cpp
+      ../src/basic_pointer_oserializer.cpp
+      ../src/basic_serializer_map.cpp
+      ../src/basic_text_iprimitive.cpp
+      ../src/basic_text_oprimitive.cpp
+      ../src/basic_xml_archive.cpp
+      ../src/binary_iarchive.cpp
+      ../src/binary_oarchive.cpp
+      ../src/extended_type_info.cpp
+      ../src/extended_type_info_typeid.cpp
+      ../src/extended_type_info_no_rtti.cpp
+      ../src/polymorphic_iarchive.cpp
+      ../src/polymorphic_oarchive.cpp
+      ../src/stl_port.cpp
+      ../src/text_iarchive.cpp
+      ../src/text_oarchive.cpp
+      ../src/void_cast.cpp
+      ../src/archive_exception.cpp
+      ../src/xml_grammar.cpp
+      ../src/xml_iarchive.cpp
+      ../src/xml_oarchive.cpp
+      ../src/xml_archive_exception.cpp
+      @/boost/array/<version>1.67.0
+      @/boost/assert/<version>1.67.0
+      @/boost/config/<version>1.67.0
+      @/boost/core/<version>1.67.0
+      @/boost/detail/<version>1.67.0
+      @/boost/integer/<version>1.67.0
+      @/boost/io/<version>1.67.0
+      @/boost/iterator/<version>1.67.0
+      @/boost/move/<version>1.67.0
+      @/boost/mpl/<version>1.67.0
+      @/boost/optional/<version>1.67.0
+      @/boost/predef/<version>1.67.0
+      @/boost/preprocessor/<version>1.67.0
+      @/boost/smart_ptr/<version>1.67.0
+      @/boost/spirit/<version>1.67.0           
+      @/boost/static_assert/<version>1.67.0
+      @/boost/type_traits/<version>1.67.0
+      @/boost/unordered/<version>1.67.0
+      @/boost/utility/<version>1.67.0
+      @/boost/variant/<version>1.67.0
+   : requirements =
+      @<include>../include
       #<toolset>gcc:<cxxflags>"-fvisibility=hidden"
       #<toolset>gcc:<cxxflags>"-fvisibility-inlines-hidden"
       #<toolset>darwin:<cxxflags>"-fvisibility=hidden"
       #<toolset>darwin:<cxxflags>"-fvisibility-inlines-hidden"
-     @(<link>shared -> <define>"BOOST_SERIALIZATION_DYN_LINK=1")
-     @<define>BOOST_SERIALIZATION_NO_LIB
+      @(<link>shared -> <define>"BOOST_SERIALIZATION_DYN_LINK=1")
+      @<define>BOOST_SERIALIZATION_NO_LIB
    ;

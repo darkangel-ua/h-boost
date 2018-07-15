@@ -1,0 +1,41 @@
+project
+   : requirements =
+      (<toolset>msvc -> <asynch-exceptions>on)
+   ;
+
+alias boost.polygon.tests
+   : sources =
+      polygon-unit
+      voronoi-unit
+   ;
+
+local
+testing.suite polygon-unit
+   : sources =
+      [ testing.run polygon_point_test.cpp ]
+      [ testing.run polygon_segment_test.cpp ]
+      [ testing.run polygon_interval_test.cpp ]
+      [ testing.run polygon_rectangle_test.cpp ]
+      [ testing.run polygon_rectangle_formation_test.cpp ]
+      [ testing.run polygon_set_data_test.cpp ]
+      [ testing.run polygon_90_data_test.cpp ]
+      [ testing.run gtl_boost_unit_test.cpp ]
+    : common-sources =
+       /boost/test//utf/<version>1.67.0
+    ;
+
+local
+testing.suite voronoi-unit
+   : sources =
+      [ testing.run voronoi_builder_test.cpp ]
+      [ testing.run voronoi_ctypes_test.cpp ]
+      [ testing.run voronoi_diagram_test.cpp ]
+      [ testing.run voronoi_geometry_type_test.cpp ]
+      [ testing.run voronoi_predicates_test.cpp ]
+      [ testing.run voronoi_robust_fpt_test.cpp ]
+      [ testing.run voronoi_structures_test.cpp ]
+   : common-sources =
+      /boost/test//utf/<version>1.67.0
+   ;
+
+

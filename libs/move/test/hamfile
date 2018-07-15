@@ -1,0 +1,7 @@
+testing.suite boost.move.tests
+   : sources =
+      [ testing.run-many [ glob ./*.cpp ] ]
+   : common-sources =
+      /boost/move/<version>1.67.0
+      /boost/timer/<version>1.67.0
+   ;

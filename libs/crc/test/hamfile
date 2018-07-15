@@ -1,0 +1,7 @@
+testing.suite boost.crc.tests 
+   : sources =
+      [ testing.run crc_test.cpp ]
+   : common-sources =
+      /boost/crc/<version>1.67.0
+      /boost/test//boost.test.execution_monitor/<version>1.67.0
+   ;

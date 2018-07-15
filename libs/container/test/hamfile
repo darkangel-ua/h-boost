@@ -1,0 +1,13 @@
+project
+   : requirements =
+      (<link>shared -> <define>"BOOST_CONTAINER_DYN_LINK=1")
+#      (<toolset>gcc-cygwin -> <link>static)
+   ;
+
+testing.suite boost.container.tests 
+   : sources =
+      [ testing.run-many [ glob ./*.cpp ] ] 
+   : common-sources =
+      /boost/container/<version>1.67.0
+      /boost/utility/<version>1.67.0
+   ;

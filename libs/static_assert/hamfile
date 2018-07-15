@@ -1,0 +1,24 @@
+testing.suite boost.static_assert.tests 
+   : sources =
+      [ testing.run static_assert_test.cpp ]
+#	[ testing.run static_assert_example_1.cpp ]
+      [ testing.run static_assert_example_2.cpp ]
+      [ testing.run static_assert_example_3.cpp ]
+      [ testing.compile-fail static_assert_test_fail_1.cpp ]
+      [ testing.compile-fail static_assert_test_fail_2.cpp ]
+      [ testing.compile-fail static_assert_test_fail_3.cpp ]
+      [ testing.compile-fail static_assert_test_fail_4.cpp ]
+      [ testing.compile-fail static_assert_test_fail_5.cpp ]
+      [ testing.compile-fail static_assert_test_fail_6.cpp ]
+      [ testing.compile-fail static_assert_test_fail_7.cpp ]
+      [ testing.compile-fail static_assert_test_fail_8.cpp ]
+      [ testing.compile-fail static_assert_test_fail_9.cpp ]
+      [ testing.compile-fail static_assert_test_fail_10.cpp ]
+   ;
+
+
+
+
+
+
+

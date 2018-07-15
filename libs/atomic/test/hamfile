@@ -1,15 +1,23 @@
-project "boost/atomic/test"
-    : requirements
+project 
+   : requirements = 
       <threading>multi
-    ;
+      (<target-os>windows -> <define>BOOST_USE_WINDOWS_H)
+      (<target-os>windows -> <define>"_WIN32_WINNT=0x0500")
+      (<toolset>gcc && <target-os>windows -> <linkflags>"-lkernel32")
+   ;
 
-test-suite atomic
-    : [ testing.run native_api.cpp ]
+testing.suite boost.atomic.tests
+   : sources = 
+      [ testing.run native_api.cpp ]
       [ testing.run fallback_api.cpp ]
       [ testing.run atomicity.cpp ]
       [ testing.run ordering.cpp ]
       [ testing.run lockfree.cpp ]
-    : 
-      /boost/atomic/<version>1.58.0+1
-      /boost/thread/<version>1.58.0+1
-    ;
+      [ testing.compile-fail cf_arith_void_ptr.cpp ]
+      [ testing.compile-fail cf_arith_func_ptr.cpp ]
+      [ testing.compile-fail cf_arith_mem_ptr.cpp ]
+      [ testing.compile c_implicit_ctor.cpp ]
+   : common-sources =
+      /boost/atomic/<version>1.67.0 
+      /boost/thread/<version>1.67.0
+   ;

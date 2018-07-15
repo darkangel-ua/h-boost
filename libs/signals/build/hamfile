@@ -1,19 +1,23 @@
-project boost/signals : requirements = <version>1.58.0+1 ;
+project boost/signals 
+   : requirements =
+      <version>1.67.0 
+   ;
 
 lib boost.signals 
-   :
-     [ glob ../src/*.cpp ]
-     @/boost/any/<version>1.58.0+1
-     @/boost/config/<version>1.58.0+1
-     @/boost/core/<version>1.58.0+1
-     @/boost/function/<version>1.58.0+1
-     @/boost/iterator/<version>1.58.0+1
-     @/boost/mpl/<version>1.58.0+1
-     @/boost/optional/<version>1.58.0+1
-     @/boost/smart_ptr/<version>1.58.0+1
-     @/boost/type_traits/<version>1.58.0+1
-     @/boost/utility/<version>1.58.0+1
-   : @<include>../include
-     <define>"BOOST_SIGNALS_NO_LIB=1"
-     (<link>shared -> <define>"BOOST_SIGNALS_DYN_LINK=1")
+   : sources =
+      [ glob ../src/*.cpp ]
+      @/boost/any/<version>1.67.0
+      @/boost/config/<version>1.67.0
+      @/boost/core/<version>1.67.0
+      @/boost/function/<version>1.67.0
+      @/boost/iterator/<version>1.67.0
+      @/boost/mpl/<version>1.67.0
+      @/boost/optional/<version>1.67.0
+      @/boost/smart_ptr/<version>1.67.0
+      @/boost/type_traits/<version>1.67.0
+      @/boost/utility/<version>1.67.0
+   : requirements =
+      @<include>../include
+      <define>"BOOST_SIGNALS_NO_LIB=1"
+      (<link>shared -> <define>"BOOST_SIGNALS_DYN_LINK=1")
    ;

@@ -1,0 +1,8 @@
+testing.suite boost.logic.tests 
+   : sources =  
+      [ testing.run tribool_test.cpp ]
+      [ testing.run tribool_rename_test.cpp ]
+      [ testing.run tribool_io_test.cpp ]
+   ;
+
+      

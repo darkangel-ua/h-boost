@@ -1,0 +1,34 @@
+project boost/convert/test
+   : requirements =
+      <warnings>on
+#      <toolset>icpc:<cxxflags>"-std=c++11"
+#      <toolset>clang:<cxxflags>"-std=c++11"
+      (<toolset>gcc -> <warnings>all <cxxflags>"-O3 -std=c++0x -Wno-unused-variable -Wno-unused-local-typedefs -Wno-long-long")
+      (<toolset>msvc -> <warnings>all
+                        <cxxflags>"/wd4996 /wd4512 /wd4610 /wd4510 /wd4127 /wd4701 /wd4127 /wd4305 /wd4244 /wd4714 /wd4189"
+                        <asynch-exceptions>on
+                        <define>_CRT_SECURE_NO_DEPRECATE
+                        <define>_SCL_SECURE_NO_DEPRECATE
+                        <define>_SCL_SECURE_NO_WARNINGS
+                        <define>_CRT_SECURE_NO_WARNINGS)
+      <source>(/boost/convert/<version>1.67.0)
+   ;  
+
+explicit
+exe convert_test_performance : performance.cpp /boost/timer//boost_timer ;
+explicit
+exe convert_test_performance_spirit : performance_spirit.cpp ;
+
+testing.run sources = callable.cpp : name = convert_test_callable ;
+testing.run sources = fallbacks.cpp : name = convert_test_fallbacks ;
+testing.run sources = spirit_converter.cpp : name = convert_test_spirit_converter ;
+testing.run sources = stream_converter.cpp : name = convert_test_stream_converter ;
+testing.run sources = printf_converter.cpp : name = convert_test_printf_converter ;
+testing.run sources = strtol_converter.cpp : name = convert_test_strtol_converter ;
+testing.run sources = lcast_converter.cpp  : name = convert_test_lcast_converter ;
+testing.run sources = encryption.cpp       : name = convert_test_encryption ;
+testing.run sources = user_type.cpp        : name = convert_test_user_type ;
+testing.run sources = str_to_int.cpp       : name = convert_test_str_to_int ;
+testing.run sources = sfinae.cpp           : name = convert_test_sfinae ;
+testing.run sources = has_member.cpp       : name = convert_test_has_member ;
+

@@ -1,6 +1,9 @@
-project boost/config : requirements = <version>1.58.0+1 ;
+project boost/config
+   : requirements =
+      <version>1.67.0
+   ;
 
 header-lib boost.config 
-   :
-   : @<include>../include
+   : requirements =
+      @<include>../include
    ;

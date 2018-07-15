@@ -1,0 +1,11 @@
+project
+   : requirements =
+      (<host-os>windows && <toolset>clang -> <linkflags>"-lole32 -loleaut32 -lpsapi -ladvapi32")
+   ;
+
+testing.suite boost.intrusive.tests 
+   : sources =
+      [ testing.run-many [ glob ./*.cpp ] ]
+   : common-sources =
+      /boost/intrusive/<version>1.67.0
+   ;

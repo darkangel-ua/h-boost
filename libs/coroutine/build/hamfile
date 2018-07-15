@@ -1,17 +1,43 @@
-project boost/coroutine : requirements = <version>1.58.0+1 ;
-
-header-lib boost.coroutine  
-   :
-     /boost/assert/<version>1.58.0+1
-     /boost/config/<version>1.58.0+1
-     /boost/context/<version>1.58.0+1
-     /boost/core/<version>1.58.0+1
-     /boost/exception/<version>1.58.0+1
-     /boost/move/<version>1.58.0+1
-     /boost/range/<version>1.58.0+1
-     /boost/system/<version>1.58.0+1
-     /boost/throw_exception/<version>1.58.0+1
-     /boost/type_traits/<version>1.58.0+1
-     /boost/utility/<version>1.58.0+1
-   : @<include>../include
+project boost/coroutine
+   : requirements =
+      <version>1.67.0
    ;
+
+local
+alias stack_traits_sources
+   : sources =
+      windows/stack_traits.cpp
+   : requirements =
+      <target-os>windows
+   ;
+
+local
+alias stack_traits_sources
+   : sources = 
+      posix/stack_traits.cpp
+   ;
+
+lib boost.coroutine
+   : sources =
+      ../src/detail/coroutine_context.cpp
+      ../src/exceptions.cpp
+      stack_traits_sources
+      @/boost/assert/<version>1.67.0
+      @/boost/config/<version>1.67.0
+      @/boost/context/<version>1.67.0
+      @/boost/core/<version>1.67.0
+      @/boost/exception/<version>1.67.0
+      @/boost/move/<version>1.67.0
+      @/boost/range/<version>1.67.0
+      @/boost/system/<version>1.67.0
+      @/boost/throw_exception/<version>1.67.0
+      @/boost/type_traits/<version>1.67.0
+      @/boost/utility/<version>1.67.0
+   : requirements =
+#      (<toolset>gcc && <segmented-stacks>on -> <cxxflags>"-fsplit-stack" <cxxflags>-DBOOST_USE_SEGMENTED_STACKS)
+#      <toolset>clang,<segmented-stacks>on:<cxxflags>-fsplit-stack
+#      <toolset>clang,<segmented-stacks>on:<cxxflags>-DBOOST_USE_SEGMENTED_STACKS
+      (<link>shared -> <define>"BOOST_COROUTINES_DYN_LINK=1")
+      <define>BOOST_COROUTINES_SOURCE
+   ;
+

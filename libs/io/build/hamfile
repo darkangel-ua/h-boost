@@ -1,6 +1,11 @@
-project boost/io : requirements = <version>1.58.0+1 ;
+project boost/io 
+   : requirements =
+      <version>1.67.0 
+   ;
 
-header-lib boost.io 
-   : /boost/config/<version>1.58.0+1
-   : @<include>../include
+header-lib boost.io
+   : sources =
+      /boost/config/<version>1.67.0
+   : requirements =
+      @<include>../include
    ;

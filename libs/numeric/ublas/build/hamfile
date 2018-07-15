@@ -1,18 +1,22 @@
-project boost/numeric/ublas : requirements = <version>1.58.0+1 ;
+project boost/numeric/ublas 
+   : requirements =
+      <version>1.67.0 
+   ;
 
-header-lib boost.numeric.ublas  
-   :
-     /boost/config/<version>1.58.0+1
-     /boost/core/<version>1.58.0+1
-     /boost/iterator/<version>1.58.0+1
-     /boost/mpl/<version>1.58.0+1
-     /boost/numeric/interval/<version>1.58.0+1
-     /boost/range/<version>1.58.0+1
-     /boost/serialization/<version>1.58.0+1
-     /boost/smart_ptr/<version>1.58.0+1
-     /boost/static_assert/<version>1.58.0+1
-     /boost/type_traits/<version>1.58.0+1
-     /boost/typeof/<version>1.58.0+1
-     /boost/utility/<version>1.58.0+1
-   : @<include>../include
+header-lib boost.numeric.ublas
+   : sources =
+      /boost/concept_check/<version>1.67.0
+      /boost/config/<version>1.67.0
+      /boost/core/<version>1.67.0
+      /boost/iterator/<version>1.67.0
+      /boost/mpl/<version>1.67.0
+      /boost/numeric/interval/<version>1.67.0
+      /boost/range/<version>1.67.0
+      /boost/serialization/<version>1.67.0
+      /boost/smart_ptr/<version>1.67.0
+      /boost/static_assert/<version>1.67.0
+      /boost/type_traits/<version>1.67.0
+      /boost/typeof/<version>0.67.0
+   : usage-requirements =
+      <include>../include
    ;

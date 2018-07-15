@@ -1,25 +1,30 @@
 
-project boost/accumulators : requirements = <version>1.58.0+1 ;
+project boost/accumulators 
+   : requirements =
+      <version>1.67.0 
+   ;
 
-header-lib boost.accumulators  
-   :
-     /boost/assert/<version>1.58.0+1
-     /boost/circular_buffer/<version>1.58.0+1
-     /boost/concept_check/<version>1.58.0+1
-     /boost/config/<version>1.58.0+1
-     /boost/core/<version>1.58.0+1
-     /boost/fusion/<version>1.58.0+1
-     /boost/iterator/<version>1.58.0+1
-     /boost/mpl/<version>1.58.0+1
-     /boost/numeric/conversion/<version>1.58.0+1
-     /boost/numeric/ublas/<version>1.58.0+1
-     /boost/parameter/<version>1.58.0+1
-     /boost/preprocessor/<version>1.58.0+1
-     /boost/range/<version>1.58.0+1
-     /boost/static_assert/<version>1.58.0+1
-     /boost/throw_exception/<version>1.58.0+1
-     /boost/tuple/<version>1.58.0+1
-     /boost/type_traits/<version>1.58.0+1
-     /boost/typeof/<version>1.58.0+1
-   : @<include>../include
+header-lib boost.accumulators
+   : sources =
+      /boost/array/<version>1.67.0
+      /boost/assert/<version>1.67.0
+      /boost/circular_buffer/<version>1.67.0
+      /boost/concept_check/<version>1.67.0
+      /boost/config/<version>1.67.0
+      /boost/core/<version>1.67.0
+      /boost/fusion/<version>1.67.0
+      /boost/iterator/<version>1.67.0
+      /boost/mpl/<version>1.67.0
+      /boost/numeric/conversion/<version>1.67.0
+      /boost/numeric/ublas/<version>1.67.0
+      /boost/parameter/<version>1.67.0
+      /boost/preprocessor/<version>1.67.0
+      /boost/range/<version>1.67.0
+      /boost/static_assert/<version>1.67.0
+      /boost/throw_exception/<version>1.67.0
+      /boost/tuple/<version>1.67.0
+      /boost/type_traits/<version>1.67.0
+      /boost/typeof/<version>1.67.0
+   : usage-requirements =
+      <include>../include
    ;

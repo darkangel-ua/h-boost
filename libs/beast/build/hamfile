@@ -1,0 +1,25 @@
+project boost/beast
+   : requirements =
+      <version>1.67.0
+   ;
+
+header-lib boost.beast 
+   : sources =
+      /boost/asio/<version>1.67.0
+      /boost/assert/<version>1.67.0
+      /boost/bind/<version>1.67.0
+      /boost/config/<version>1.67.0
+      /boost/container/<version>1.67.0
+      /boost/core/<version>1.67.0
+      /boost/endian/<version>1.67.0
+      /boost/intrusive/<version>1.67.0
+      /boost/optional/<version>1.67.0
+      /boost/smart_ptr/<version>1.67.0
+      /boost/static_assert/<version>1.67.0
+      /boost/system/<version>1.67.0
+      /boost/throw_exception/<version>1.67.0
+      /boost/type_traits/<version>1.67.0
+      /boost/utility winapi/<version>1.67.0
+   : usage-requirements =
+      <include>../include
+   ;

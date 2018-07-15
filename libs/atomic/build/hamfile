@@ -1,8 +1,20 @@
-project boost/atomic : requirements = <version>1.58.0+1 ;
+project boost/atomic
+   : requirements =
+      <version>1.67.0
+   ;
 
-header-lib boost.atomic 
-   : /boost/assert/<version>1.58.0+1
-     /boost/config/<version>1.58.0+1
-     /boost/type_traits/<version>1.58.0+1
-   : @<include>../include
+lib boost.atomic 
+   : sources =
+      ../src/lockpool.cpp
+      @/boost/assert/<version>1.67.0
+      @/boost/config/<version>1.67.0
+      @/boost/type_traits/<version>1.67.0
+   : requirements =
+      <threading>multi
+      @(<link>shared -> <define>"BOOST_ATOMIC_DYN_LINK=1")
+      @(<link>static -> <define>"BOOST_ATOMIC_STATIC_LINK=1")
+      <define>BOOST_ATOMIC_SOURCE
+      (<target-os>windows -> <define>BOOST_USE_WINDOWS_H)
+      (<target-os>windows -> <define>"_WIN32_WINNT=0x0500")
+      (<toolset>gcc && <target-os>windows -> <linkflags>"-lkernel32")   
    ;

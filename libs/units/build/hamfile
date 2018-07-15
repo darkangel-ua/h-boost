@@ -1,18 +1,23 @@
-project boost/units : requirements = <version>1.58.0+1 ;
+project boost/units 
+   : requirements =
+      <version>1.67.0 
+   ;
 
 header-lib boost.units 
-   :
-     /boost/config/<version>1.58.0+1
-     /boost/core/<version>1.58.0+1
-     /boost/integer/<version>1.58.0+1
-     /boost/io/<version>1.58.0+1
-     /boost/lambda/<version>1.58.0+1
-     /boost/math/<version>1.58.0+1
-     /boost/mpl/<version>1.58.0+1
-     /boost/preprocessor/<version>1.58.0+1
-     /boost/serialization/<version>1.58.0+1
-     /boost/static_assert/<version>1.58.0+1
-     /boost/type_traits/<version>1.58.0+1
-     /boost/typeof/<version>1.58.0+1
-   : @<include>../include
+   : sources =
+      /boost/assert/<version>1.67.0
+      /boost/config/<version>1.67.0
+      /boost/core/<version>1.67.0
+      /boost/integer/<version>1.67.0
+      /boost/io/<version>1.67.0
+      /boost/lambda/<version>1.67.0
+      /boost/math/<version>1.67.0
+      /boost/mpl/<version>1.67.0
+      /boost/preprocessor/<version>1.67.0
+      /boost/serialization/<version>1.67.0
+      /boost/static_assert/<version>1.67.0
+      /boost/type_traits/<version>1.67.0
+      /boost/typeof/<version>1.67.0
+   : usage-requirements =
+      <include>../include
    ;

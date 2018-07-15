@@ -1,0 +1,20 @@
+project
+   : requirements =
+      <define>BOOST_SIGNALS_NO_DEPRECATION_WARNING
+      <define>BOOST_SIGNALS_STATIC_LINK
+      <link>static
+   ;
+
+testing.suite boost.signals.tests
+   : sources = 
+      [ testing.run dead_slot_test.cpp ]
+      [ testing.run deletion_test.cpp ]
+      [ testing.run ordering_test.cpp ]
+      [ testing.run signal_n_test.cpp ]
+      [ testing.run signal_test.cpp ]
+      [ testing.run trackable_test.cpp ]
+      [ testing.run swap_test.cpp ]
+   : common-sources =
+      /boost/signals/<version>1.67.0
+      /boost/test//execution_monitor/<version>1.67.0
+   ;

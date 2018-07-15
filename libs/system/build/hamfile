@@ -1,14 +1,20 @@
-project boost/system : requirements = <version>1.58.0+1 ;
+project boost/system 
+   : requirements = 
+      <version>1.67.0 
+   ;
 
 lib boost.system 
-   : ../src/error_code.cpp
-     @/boost/assert/<version>1.58.0+1
-     @/boost/config/<version>1.58.0+1
-     @/boost/core/<version>1.58.0+1
-     @/boost/predef/<version>1.58.0+1
-   : @<include>../include
+   : sources = 
+      ../src/error_code.cpp
+      @/boost/assert/<version>1.67.0
+      @/boost/config/<version>1.67.0
+      @/boost/core/<version>1.67.0
+      @/boost/predef/<version>1.67.0
+      @/boost/winapi/<version>1.67.0
+   : requirements = 
+      @<include>../include
       <define>BOOST_SYSTEM_SOURCE
-     @(<link>shared -> <define>"BOOST_SYSTEM_DYN_LINK=1")
-     @(<link>static -> <define>"BOOST_SYSTEM_STATIC_LINK=1")
-     @<define>BOOST_SYSTEM_NO_LIB
+      @(<link>shared -> <define>"BOOST_SYSTEM_DYN_LINK=1")
+      @(<link>static -> <define>"BOOST_SYSTEM_STATIC_LINK=1")
+      @<define>BOOST_SYSTEM_NO_LIB
    ;

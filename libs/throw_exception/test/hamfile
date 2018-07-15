@@ -1,0 +1,12 @@
+project
+   : requirements = 
+      <link>static
+      <exception-handling>on
+   ;
+
+testing.run throw_exception_test.cpp ;
+testing.run throw_exception_no_exceptions_test.cpp ;
+testing.run throw_exception_no_integration_test.cpp ;
+testing.run throw_exception_no_both_test.cpp ;
+
+testing.compile-fail throw_exception_fail.cpp ;

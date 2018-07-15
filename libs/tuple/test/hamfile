@@ -1,0 +1,9 @@
+testing.suite boost.tuple.tests 
+   : sources = 
+      [ testing.run tuple_test_bench.cpp ]
+      [ testing.run io_test.cpp ]
+      [ testing.run another_tuple_test_bench.cpp ]
+   : common-sources =
+      /boost/tuple/<version>1.67.0
+      /boost/test//execution_monitor/<version>1.67.0
+   ;

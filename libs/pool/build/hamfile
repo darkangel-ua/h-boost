@@ -1,12 +1,16 @@
-project boost/pool : requirements = <version>1.58.0+1 ;
+project boost/pool 
+   : requirements =
+      <version>1.67.0 
+   ;
 
-header-lib boost.pool 
-   :
-     /boost/assert/<version>1.58.0+1
-     /boost/config/<version>1.58.0+1
-     /boost/integer/<version>1.58.0+1
-     /boost/thread/<version>1.58.0+1
-     /boost/throw_exception/<version>1.58.0+1
-     /boost/type_traits/<version>1.58.0+1
-   : @<include>../include
+header-lib boost.pool
+   : sources =
+      /boost/assert/<version>1.67.0
+      /boost/config/<version>1.67.0
+      /boost/integer/<version>1.67.0
+      /boost/thread/<version>1.67.0
+      /boost/throw_exception/<version>1.67.0
+      /boost/type_traits/<version>1.67.0
+   : usage-requirements =
+      <include>../include
    ;

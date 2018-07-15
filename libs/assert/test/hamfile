@@ -1,15 +1,18 @@
-test-suite assert
-    :
-        [ testing.run assert_test.cpp ]
-        [ testing.run current_function_test.cpp ]
-        [ testing.run verify_test.cpp ]
-        # expansion tests are in exp/ so that there is a backslash in the path on Windows
-        [ testing.run exp/assert_exp_test.cpp ]
-        [ testing.run exp/assert_msg_exp_test.cpp ]
-        [ testing.run exp/verify_exp_test.cpp ]
-        [ testing.run exp/verify_msg_exp_test.cpp ]
-        [ testing.run assert_test2.cpp ]
-        [ testing.run assert_msg_test2.cpp ]
-   : /boost/assert/<version>1.58.0+1
-     /boost/core/<version>1.58.0+1
-   ;
+testing.suite boost.assert.tests
+   : sources =
+      [ testing.run assert_test.cpp ]
+      [ testing.run current_function_test.cpp ]
+      [ testing.run verify_test.cpp ]
+      [ testing.run assert_is_void_test.cpp ]
+      # expansion tests are in exp/ so that there is a backslash in the path on Windows
+      [ testing.run exp/assert_exp_test.cpp ]
+      [ testing.run exp/assert_msg_exp_test.cpp ]
+      [ testing.run exp/verify_exp_test.cpp ]
+      [ testing.run exp/verify_msg_exp_test.cpp ]
+      [ testing.run assert_test2.cpp ]
+      [ testing.run assert_msg_test2.cpp ]
+      [ testing.run quick.cpp ]
+  : common-sources = 
+     /boost/assert/<version>1.67.0
+     /boost/core/<version>1.67.0
+  ;

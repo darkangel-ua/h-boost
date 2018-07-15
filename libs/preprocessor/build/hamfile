@@ -1,6 +1,9 @@
-project boost/preprocessor : requirements = <version>1.58.0+1 ;
+project boost/preprocessor
+   : requirements =
+      <version>1.67.0
+   ;
 
-header-lib boost.preprocessor 
-   :
-   : @<include>../include
+header-lib boost.preprocessor
+   : requirements =
+      @<include>../include
    ;

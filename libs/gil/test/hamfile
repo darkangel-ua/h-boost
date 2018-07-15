@@ -1,0 +1,18 @@
+project 
+   : requirements =
+      <define>BOOST_GIL_NO_IO 
+      <define>_SCL_SECURE_NO_WARNINGS
+   ;
+
+testing.suite boost.gil.tests
+   : sources =
+      [ testing.run image.cpp sample_image.cpp ]
+      [ testing.run channel.cpp ]
+      [ testing.run pixel.cpp ]
+      [ testing.run pixel_iterator.cpp ]
+      [ testing.run image_io.cpp ]
+   : common-sources =
+      /boost/gil/<version>1.67.0
+      /boost/lambda/<version>1.67.0
+      error_if.cpp
+   ;
