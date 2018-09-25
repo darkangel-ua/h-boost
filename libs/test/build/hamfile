@@ -1,12 +1,30 @@
 project boost/test
    : requirements =
-         <version>1.67.0
-        @<include>../include
-# if uncommented will work wrong because of undefined order of evaluation 
-# for conditional features
-#        @<link>shared:<define>BOOST_TEST_DYN_LINK=1
-        @<define>BOOST_TEST_NO_LIB
-        (<toolset>msvc -> <asynch-exceptions>on)
+       <version>1.67.0
+      @<include>../include
+      @<define>BOOST_TEST_NO_LIB
+      (<link>shared -> <define>"BOOST_TEST_DYN_LINK=1")                                                                                                                              
+      (<toolset>borland -> <cxxflags>"-w-8080")                                                                                                                                                                                  
+
+      # Disable Warning about boost::noncopyable not being exported                                                                                                                                                       
+      (<link>shared && <toolset>msvc -> <cxxflags>"-wd4275")                                                                                                                                                                        
+      (<toolset>msvc -> <cxxflags>"-wd4671" <cxxflags>"-wd4673")                                                                                                                                                                                     
+#     [ predef-check "BOOST_COMP_GNUC >= 4.3.0" : : <cxxflags>-Wno-variadic-macros ]                                                                                                                                      
+      (<toolset>clang -> <cxxflags>"-Wno-c99-extensions" <cxxflags>"-Wno-variadic-macros")                                                                                                                                                                       
+       <warnings>all                                                                                                                                                                                                       
+#      <warnings-as-errors>on                                                                                                                                                                                            
+                                                                                                                                                                                                                                       
+     # adding a dependency on boost/timer as the header are needed, and the junction needs                                                                                                                               
+     # to be there in order to build the library.                                                                                                                                                                        
+      <library>(/boost/timer/<version>1.67.0)                                                                                                                                                                                  
+   : usage-requirements =                                                                                                                                                                                                              
+      <define>"BOOST_TEST_NO_AUTO_LINK=1"                                                                                                                                                                                   
+      # Disable Warning about boost::noncopyable not being exported                                                                                                                                                       
+      (<link>shared && <toolset>msvc -> <cxxflags>"-wd4275")                                                                                                                                                                        
+                                                                                                                                                                                                                                       
+      # Adding a dependency on boost/timer as the headers need to be there in case of the                                                                                                                                 
+      # header-only usage variant                                                                                                                                                                                         
+      <use>(/boost/timer/<version>1.67.0)                                                                                                                                                                                      
    ;
     
 local
@@ -36,38 +54,54 @@ alias base_sources
 local
 alias dependencies 
    :
-     @/boost/bind/<version>1.58.0+1
-     @/boost/config/<version>1.58.0+1
-     @/boost/core/<version>1.58.0+1
-     @/boost/detail/<version>1.58.0+1
-     @/boost/exception/<version>1.58.0+1
-     @/boost/io/<version>1.58.0+1
-     @/boost/iterator/<version>1.58.0+1
-     @/boost/lexical_cast/<version>1.58.0+1
-     @/boost/mpl/<version>1.58.0+1
-     @/boost/numeric/conversion/<version>1.58.0+1
-     @/boost/optional/<version>1.58.0+1
-     @/boost/preprocessor/<version>1.58.0+1
-     @/boost/smart_ptr/<version>1.58.0+1
-     @/boost/static_assert/<version>1.58.0+1
-     @/boost/timer/<version>1.58.0+1
-     @/boost/type_traits/<version>1.58.0+1
-     @/boost/utility/<version>1.58.0+1
+     @/boost/bind/<version>1.67.0
+     @/boost/config/<version>1.67.0
+     @/boost/core/<version>1.67.0
+     @/boost/detail/<version>1.67.0
+     @/boost/exception/<version>1.67.0
+     @/boost/io/<version>1.67.0
+     @/boost/iterator/<version>1.67.0
+     @/boost/lexical_cast/<version>1.67.0
+     @/boost/mpl/<version>1.67.0
+     @/boost/numeric/conversion/<version>1.67.0
+     @/boost/optional/<version>1.67.0
+     @/boost/preprocessor/<version>1.67.0
+     @/boost/smart_ptr/<version>1.67.0
+     @/boost/static_assert/<version>1.67.0
+     @/boost/timer/<version>1.67.0
+     @/boost/type_traits/<version>1.67.0
+     @/boost/utility/<version>1.67.0
    ;
 
 local
 lib boost.test.utf
-   :
-     base_sources
+   : sources =
+      ../src/compiler_log_formatter.cpp
+      ../src/debug.cpp
+      ../src/decorator.cpp
+      ../src/execution_monitor.cpp
+      ../src/framework.cpp
+      ../src/plain_report_formatter.cpp
+      ../src/progress_monitor.cpp
+      ../src/results_collector.cpp
+      ../src/results_reporter.cpp
+      ../src/test_framework_init_observer.cpp
+      ../src/test_tools.cpp
+      ../src/test_tree.cpp
+      ../src/unit_test_log.cpp
+      ../src/unit_test_main.cpp
+      ../src/unit_test_monitor.cpp
+      ../src/unit_test_parameters.cpp
+      ../src/junit_log_formatter.cpp
+      ../src/xml_log_formatter.cpp
+      ../src/xml_report_formatter.cpp
      dependencies
-   :
-    <link>static
    ;
 
 local
 header-lib boost.test.minimal 
    :
-    /boost/smart_ptr/<version>1.58.0+1 
+    /boost/smart_ptr/<version>1.67.0 
    ;
 
 local

@@ -3,4 +3,6 @@ testing.suite boost.io.tests
       [ testing.run ios_state_unit_test.cpp /boost/test//utf/<version>1.67.0/<link>static ]
       [ testing.run ios_state_test.cpp /boost/test//utf/<version>1.67.0/<link>static ]
       [ testing.run quoted_manip_test.cpp ]
+   : common-sources =
+      /boost/io/<version>1.67.0
    ;

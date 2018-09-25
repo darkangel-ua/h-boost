@@ -1,0 +1,180 @@
+project boost/preprocessor/tests 
+   : requirements =
+      <warnings>on
+      <include>../../..
+      (<toolset>gcc-4.3.0 -> <warnings>all <cxxflags>-Wno-variadic-macros)
+      (<toolset>gcc-4.4.0 -> <warnings>all <cxxflags>-Wno-variadic-macros)
+      (<toolset>gcc-4.5.0 -> <warnings>all <cxxflags>-Wno-variadic-macros <linkflags>"-Wl,--enable-auto-import")
+      (<toolset>gcc-4.5.2 -> <warnings>all <cxxflags>-Wno-variadic-macros)
+      (<toolset>msvc -> <warnings>all)
+   ;
+
+alias preprocessor 
+   : requirements =
+      <toolset>gcc-3.4
+   ;
+alias preprocessor
+   : requirements =
+      <toolset>gcc-4.1
+   ;
+alias preprocessor
+   : requirements =
+      <toolset>gcc-4.2
+   ;    
+    
+alias preprocessor
+   : sources =
+      [ testing.compile-many
+             sources =
+              arithmetic.cpp
+              array.cpp
+              comparison.cpp
+              control.cpp
+              debug.cpp
+              facilities.cpp
+              iteration.cpp
+              list.cpp
+              logical.cpp
+              punctuation.cpp
+              repetition.cpp
+              selection.cpp
+              seq.cpp
+              slot.cpp
+              tuple.cpp
+              variadic.cpp
+           : requirements =
+              (<toolset>gcc || <toolset>clang-linux -> <cxxflags>"-std=c++0x")
+      ]
+   ;
+
+alias preprocessor_nvm
+   : sources =
+      [ testing.compile-many
+             name-template =
+              "${name}_nvm"
+           : sources =
+              arithmetic.cpp
+              array.cpp
+              comparison.cpp
+              control.cpp
+              debug.cpp
+              facilities.cpp
+              iteration.cpp
+              list.cpp
+              logical.cpp
+              punctuation.cpp
+              repetition.cpp
+              selection.cpp
+              seq.cpp
+              slot.cpp
+              tuple.cpp
+           : requirements =
+              <define>"BOOST_PP_VARIADICS=0"
+              <use>(/boost/preprocessor/<version>1.67.0)
+      ]
+   ;
+
+alias preprocessor_c
+   : sources =
+      [ testing.compile-many
+             name-template =
+              "${name}_c"
+           : sources =
+              arithmetic.c
+              array.c
+              comparison.c
+              control.c
+              debug.c
+              facilities.c
+              list.c
+              logical.c
+              punctuation.c
+              selection.c
+              seq.c
+              slot.c
+              tuple.c
+              variadic.c
+           : requirements =
+              <use>(/boost/preprocessor/<version>1.67.0)
+              (<toolset>gcc || <toolset>clang-linux -> <cflags>"-std=c99")
+      ]
+   ;
+
+alias preprocessor_c_nvm
+   : sources =
+      [ testing.compile-many
+             name-template =
+              "${name}_c_nvm"
+           : sources =
+              arithmetic.c
+              array.c
+              comparison.c
+              control.c
+              debug.c
+              facilities.c
+              list.c
+              logical.c
+              punctuation.c
+              selection.c
+              seq.c
+              slot.c
+              tuple.c
+              variadic.c
+           : requirements =
+              <use>(/boost/preprocessor/<version>1.67.0)
+              (<toolset>gcc || <toolset>clang-linux -> <cflags>"-std=c99" <define>"BOOST_PP_VARIADICS=0")
+      ]
+   ;
+
+alias preprocessor_isempty
+   : requirements =
+       <toolset>gcc-3.4
+   ;
+
+alias preprocessor_isempty
+   : requirements =
+       <toolset>gcc-4.1
+   ;
+
+alias preprocessor_isempty
+   : requirements =
+       <toolset>gcc-4.2
+   ;
+
+alias preprocessor_isempty
+   : sources =
+      [ testing.compile isempty.cpp : (<toolset>gcc || <toolset>clang-linux -> <cxxflags>"-std=c++0x") <use>(/boost/preprocessor/<version>1.67.0) ]
+      [ testing.compile-fail isempty_variadic_standard_failure.cpp : (<toolset>gcc || <toolset>clang-linux -> <cxxflags>"-std=c++0x") <use>(/boost/preprocessor/<version>1.67.0) ]
+      [ testing.compile-fail isempty_variadic_standard_failure2.cpp : (<toolset>gcc || <toolset>clang-linux -> <cxxflags>"-std=c++0x") <use>(/boost/preprocessor/<version>1.67.0) ]
+   ;
+  
+alias preprocessor_isempty_nvm
+   : sources =
+      [ testing.compile name = isempty_nvm : sources = isempty.cpp : requirements = <define>"BOOST_PP_VARIADICS=0" <use>(/boost/preprocessor/<version>1.67.0) ]
+   ;
+
+alias preprocessor_isempty_c
+   : sources =
+      [ testing.compile isempty.c : name = isempty_c : requirements = (<toolset>gcc || <toolset>clang-linux -> <cxxflags>"-std=c++0x") <use>(/boost/preprocessor/<version>1.67.0) ]
+      [ testing.compile-fail isempty_variadic_standard_failure.c : name = isempty_variadic_standard_failure_c : requirements = (<toolset>gcc || <toolset>clang-linux -> <cxxflags>"-std=c++0x") <use>(/boost/preprocessor/<version>1.67.0) ]
+      [ testing.compile-fail isempty_variadic_standard_failure2.c : name = isempty_variadic_standard_failure2_c : requirements = (<toolset>gcc || <toolset>clang-linux -> <cxxflags>"-std=c++0x") <use>(/boost/preprocessor/<version>1.67.0) ]
+   ;
+
+alias preprocessor_isempty_c_nvm
+   : sources =
+      [ testing.compile
+             name =
+              isempty_c_nvm
+           : sources =
+              isempty.c
+           : requirements =
+              <define>"BOOST_PP_VARIADICS=0"
+              <use>(/boost/preprocessor/<version>1.67.0)
+              (<toolset>gcc || <toolset>clang-linux -> <cflags>"-std=c99")
+        ]
+   ;
+
+alias preprocessor_config
+   : sources =
+      [ testing.run config_info.cpp /boost/preprocessor/<version>1.67.0 ]
+   ;
