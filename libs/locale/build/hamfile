@@ -3,3 +3,4 @@ project boost/locale
       <version>1.67.0
    ;
 
+alias boost.locale ;

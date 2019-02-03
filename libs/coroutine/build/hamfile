@@ -6,7 +6,7 @@ project boost/coroutine
 local
 alias stack_traits_sources
    : sources =
-      windows/stack_traits.cpp
+      ../src/windows/stack_traits.cpp
    : requirements =
       <target-os>windows
    ;
@@ -14,7 +14,7 @@ alias stack_traits_sources
 local
 alias stack_traits_sources
    : sources = 
-      posix/stack_traits.cpp
+      ../src/posix/stack_traits.cpp
    ;
 
 lib boost.coroutine

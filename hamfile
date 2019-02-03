@@ -102,7 +102,7 @@ use-project signals : libs/signals/build ;
 use-project smart_ptr : libs/smart_ptr/build ;
 use-project sort : libs/sort/build ;
 use-project spirit : libs/spirit/build ;
-use-project stacktrace : libs/stacktrace/build ;
+#use-project stacktrace : libs/stacktrace/build ;
 use-project statechart : libs/statechart/build ;
 use-project static_assert : libs/static_assert/build ;
 use-project system : libs/system/build ;

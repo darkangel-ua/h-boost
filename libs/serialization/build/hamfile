@@ -32,6 +32,8 @@ lib boost.serialization
       ../src/xml_iarchive.cpp
       ../src/xml_oarchive.cpp
       ../src/xml_archive_exception.cpp
+      ../src/codecvt_null.cpp
+      ../src/utf8_codecvt_facet.cpp
       @/boost/array/<version>1.67.0
       @/boost/assert/<version>1.67.0
       @/boost/config/<version>1.67.0
