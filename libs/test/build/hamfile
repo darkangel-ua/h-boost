@@ -95,8 +95,8 @@ lib boost.test.utf
       ../src/junit_log_formatter.cpp
       ../src/xml_log_formatter.cpp
       ../src/xml_report_formatter.cpp
-     dependencies
-   ;
+      dependencies
+  ;
 
 local
 header-lib boost.test.minimal 

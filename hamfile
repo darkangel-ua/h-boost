@@ -1,14 +1,14 @@
 project boost;
 
-use-project accumulators : libs/accumulators/build ;
+use-project accumulators : libs/accumulators ;
 use-project algorithm : libs/algorithm/build ;
-use-project align : libs/align/build ;
-use-project any : libs/any/build ;
-use-project array : libs/array/build ;
+use-project align : libs/align ;
+use-project any : libs/any ;
+use-project array : libs/array ;
 use-project asio : libs/asio/build ;
-use-project assert : libs/assert/build ;
-use-project assign : libs/assign/build ;
-use-project atomic : libs/atomic/build ;
+use-project assert : libs/assert ;
+use-project assign : libs/assign ;
+use-project atomic : libs/atomic ;
 use-project beast : libs/beast/build ;
 use-project bimap : libs/bimap/build;
 use-project bind : libs/bind/build ;

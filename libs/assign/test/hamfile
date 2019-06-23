@@ -1,9 +1,9 @@
-testing.suite boost.assign.tests 
+testing.suite boost.assign.test
    : sources =
-      [ testing.run-many [ glob ./*.cpp ] ]
+      [ testing.run-many [ glob *.cpp : array.cpp ] ]
    : common-sources =
-      /boost/assign/<version>1.67.0
-      /boost/test//utf/<version>1.67.0    
+      /boost/assign
+      /boost/test//utf/<link>static
    ;
 
 

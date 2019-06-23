@@ -1,10 +1,10 @@
 local
 alias utf
    : sources = 
-      /boost/test//utf/<version>1.67.0
+      /boost/test//utf/<link>static
    ;        
 
-testing.suite boost.array.tests 
+testing.suite boost.array.test
    : sources =
       [ testing.run array0.cpp utf ]
       [ testing.run array1.cpp ]
@@ -18,4 +18,4 @@ testing.suite boost.array.tests
       [ testing.compile-fail array_getfail1.cpp ]
       [ testing.compile-fail array_getfail2.cpp ]
       [ testing.run array_hash.cpp utf ]
-    ;
+   ;

@@ -61,4 +61,5 @@ lib boost.thread
       @<define>BOOST_THREAD_NO_LIB
    : usage-requirements =
       (<target-os>linux -> <source>pthread)
+      (<link>shared -> <source>(/boost/system/<version>1.67.0))
    ;

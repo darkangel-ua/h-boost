@@ -1,17 +1,12 @@
-project boost/any 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.any 
    : sources = 
-      /boost/config/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/throw_exception/<version>1.67.0
-      /boost/type_index/<version>1.67.0
-      /boost/type_traits/<version>1.67.0 
+      /boost/config
+      /boost/core
+      /boost/mpl
+      /boost/static_assert
+      /boost/throw_exception
+      /boost/type_index
+      /boost/type_traits 
    : requirements =
       @<include>../include
    ;

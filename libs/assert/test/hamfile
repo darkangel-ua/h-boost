@@ -1,4 +1,4 @@
-testing.suite boost.assert.tests
+testing.suite boost.assert.test
    : sources =
       [ testing.run assert_test.cpp ]
       [ testing.run current_function_test.cpp ]
@@ -13,6 +13,6 @@ testing.suite boost.assert.tests
       [ testing.run assert_msg_test2.cpp ]
       [ testing.run quick.cpp ]
   : common-sources = 
-     /boost/assert/<version>1.67.0
-     /boost/core/<version>1.67.0
+     /boost/assert
+     /boost/core
   ;

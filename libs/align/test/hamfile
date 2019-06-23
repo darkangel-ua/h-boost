@@ -11,5 +11,5 @@ testing.suite boost.aling.tests
       [ testing.run assume_aligned_test.cpp ]
       [ testing.run is_aligned_test.cpp ]
    : common-sources =
-      /boost/align/<version>1.67.0
+      /boost/align
    ;

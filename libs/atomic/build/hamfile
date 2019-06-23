@@ -1,15 +1,11 @@
-project boost/atomic
-   : requirements =
-      <version>1.67.0
-   ;
-
 lib boost.atomic 
    : sources =
       ../src/lockpool.cpp
-      @/boost/assert/<version>1.67.0
-      @/boost/config/<version>1.67.0
-      @/boost/type_traits/<version>1.67.0
+      @/boost/assert
+      @/boost/config
+      @/boost/type_traits
    : requirements =
+      @<include>../include
       <threading>multi
       @(<link>shared -> <define>"BOOST_ATOMIC_DYN_LINK=1")
       @(<link>static -> <define>"BOOST_ATOMIC_STATIC_LINK=1")

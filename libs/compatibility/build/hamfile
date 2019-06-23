@@ -1,7 +1,3 @@
-project boost/compatibility
-   : requirements = 
-      <version>1.67.0 ;
-
 header-lib boost.compatibility
    : requirements = 
       @<include>../include

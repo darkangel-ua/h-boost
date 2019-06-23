@@ -16,7 +16,7 @@ header-lib boost.numeric.ublas
       /boost/smart_ptr/<version>1.67.0
       /boost/static_assert/<version>1.67.0
       /boost/type_traits/<version>1.67.0
-      /boost/typeof/<version>0.67.0
+      /boost/typeof/<version>1.67.0
    : usage-requirements =
       <include>../include
    ;

@@ -6,7 +6,7 @@ project
       (<toolset>gcc && <target-os>windows -> <linkflags>"-lkernel32")
    ;
 
-testing.suite boost.atomic.tests
+testing.suite boost.atomic.test
    : sources = 
       [ testing.run native_api.cpp ]
       [ testing.run fallback_api.cpp ]
@@ -18,6 +18,6 @@ testing.suite boost.atomic.tests
       [ testing.compile-fail cf_arith_mem_ptr.cpp ]
       [ testing.compile c_implicit_ctor.cpp ]
    : common-sources =
-      /boost/atomic/<version>1.67.0 
-      /boost/thread/<version>1.67.0
+      /boost/atomic
+      /boost/thread
    ;
