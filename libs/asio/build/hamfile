@@ -1,8 +1,3 @@
-project boost/asio 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 local
 alias sockets ;
 
@@ -15,20 +10,20 @@ searched-static-lib sockets : libname = Ws2_32.lib : requirements = <target-os>w
 header-lib boost.asio
    : sources =
       sockets
-      /boost/array/<version>1.67.0
-      /boost/assert/<version>1.67.0
-      /boost/bind/<version>1.67.0
-      /boost/chrono/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/coroutine/<version>1.67.0
-      /boost/date_time/<version>1.67.0
-      /boost/function/<version>1.67.0
-      /boost/regex/<version>1.67.0
-      /boost/smart_ptr/<version>1.67.0
-      /boost/system/<version>1.67.0
-      /boost/throw_exception/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
+      /boost/array
+      /boost/assert
+      /boost/bind
+      /boost/chrono
+      /boost/config
+      /boost/core
+      /boost/coroutine
+      /boost/date_time
+      /boost/function
+      /boost/regex
+      /boost/smart_ptr
+      /boost/system
+      /boost/throw_exception
+      /boost/type_traits
    : usage-requirements =
       <include>../include
    ;

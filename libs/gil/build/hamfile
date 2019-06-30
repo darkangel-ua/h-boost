@@ -1,20 +1,15 @@
-project boost/gil 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.gil 
    : sources =
-      /boost/bind/<version>1.67.0
-      /boost/concept_check/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/iterator/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/preprocessor/<version>1.67.0
-      /boost/smart_ptr/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-   : requirements =
-      @<include>../include
+      /boost/bind
+      /boost/concept_check
+      /boost/config
+      /boost/core
+      /boost/iterator
+      /boost/mpl
+      /boost/preprocessor
+      /boost/smart_ptr
+      /boost/static_assert
+      /boost/type_traits
+   : usage-requirements =
+      <include>../include
    ;

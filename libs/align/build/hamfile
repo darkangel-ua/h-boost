@@ -5,6 +5,6 @@ header-lib boost.align
       /boost/core
       /boost/static_assert
       /boost/throw_exception
-   : requirements =
-      @<include>../include
+   : usage-requirements =
+      <include>../include
    ;

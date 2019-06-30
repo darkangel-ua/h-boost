@@ -1,6 +1,5 @@
-project boost/test
+project
    : requirements =
-       <version>1.67.0
       @<include>../include
       @<define>BOOST_TEST_NO_LIB
       (<link>shared -> <define>"BOOST_TEST_DYN_LINK=1")                                                                                                                              
@@ -16,7 +15,7 @@ project boost/test
                                                                                                                                                                                                                                        
      # adding a dependency on boost/timer as the header are needed, and the junction needs                                                                                                                               
      # to be there in order to build the library.                                                                                                                                                                        
-      <library>(/boost/timer/<version>1.67.0)                                                                                                                                                                                  
+      <source>(/boost/timer)                                                                                                                                                                                  
    : usage-requirements =                                                                                                                                                                                                              
       <define>"BOOST_TEST_NO_AUTO_LINK=1"                                                                                                                                                                                   
       # Disable Warning about boost::noncopyable not being exported                                                                                                                                                       
@@ -24,7 +23,7 @@ project boost/test
                                                                                                                                                                                                                                        
       # Adding a dependency on boost/timer as the headers need to be there in case of the                                                                                                                                 
       # header-only usage variant                                                                                                                                                                                         
-      <use>(/boost/timer/<version>1.67.0)                                                                                                                                                                                      
+      <use>(/boost/timer)                                                                                                                                                                                      
    ;
     
 local
@@ -54,23 +53,23 @@ alias base_sources
 local
 alias dependencies 
    :
-     @/boost/bind/<version>1.67.0
-     @/boost/config/<version>1.67.0
-     @/boost/core/<version>1.67.0
-     @/boost/detail/<version>1.67.0
-     @/boost/exception/<version>1.67.0
-     @/boost/io/<version>1.67.0
-     @/boost/iterator/<version>1.67.0
-     @/boost/lexical_cast/<version>1.67.0
-     @/boost/mpl/<version>1.67.0
-     @/boost/numeric/conversion/<version>1.67.0
-     @/boost/optional/<version>1.67.0
-     @/boost/preprocessor/<version>1.67.0
-     @/boost/smart_ptr/<version>1.67.0
-     @/boost/static_assert/<version>1.67.0
-     @/boost/timer/<version>1.67.0
-     @/boost/type_traits/<version>1.67.0
-     @/boost/utility/<version>1.67.0
+     @/boost/bind
+     @/boost/config
+     @/boost/core
+     @/boost/detail
+     @/boost/exception
+     @/boost/io
+     @/boost/iterator
+     @/boost/lexical_cast
+     @/boost/mpl
+     @/boost/numeric/conversion
+     @/boost/optional
+     @/boost/preprocessor
+     @/boost/smart_ptr
+     @/boost/static_assert
+     @/boost/timer
+     @/boost/type_traits
+     @/boost/utility
    ;
 
 local
@@ -101,7 +100,7 @@ lib boost.test.utf
 local
 header-lib boost.test.minimal 
    :
-    /boost/smart_ptr/<version>1.67.0 
+    /boost/smart_ptr
    ;
 
 local
@@ -114,6 +113,6 @@ lib boost.test.execution_monitor
     <link>static
    ;
 
-explicit alias minimal : boost.test.minimal/<version>1.67.0 ;
-explicit alias utf : boost.test.utf/<version>1.67.0 ;
-explicit alias execution_monitor : boost.test.execution_monitor/<version>1.67.0 ;
+explicit alias minimal : boost.test.minimal ;
+explicit alias utf : boost.test.utf ;
+explicit alias execution_monitor : boost.test.execution_monitor ;

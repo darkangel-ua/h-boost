@@ -1,15 +1,10 @@
-project boost/context 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.context  
    : sources =
-      /boost/assert/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/pool/<version>1.67.0
-      /boost/predef/<version>1.67.0
-      /boost/smart_ptr/<version>1.67.0
+      /boost/assert
+      /boost/config
+      /boost/pool
+      /boost/predef
+      /boost/smart_ptr
    : usage-requirements =
       <include>../include
    ;

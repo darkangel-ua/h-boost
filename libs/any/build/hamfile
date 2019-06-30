@@ -7,6 +7,6 @@ header-lib boost.any
       /boost/throw_exception
       /boost/type_index
       /boost/type_traits 
-   : requirements =
-      @<include>../include
+   : usage-requirements =
+      <include>../include
    ;

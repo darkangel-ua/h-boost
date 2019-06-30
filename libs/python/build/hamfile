@@ -1,27 +1,22 @@
-project boost/python 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.python  
    : sources =
-      /boost/bind/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/conversion/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/detail/<version>1.67.0
-      /boost/foreach/<version>1.67.0
-      /boost/function/<version>1.67.0
-      /boost/iterator/<version>1.67.0
-      /boost/lexical_cast/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/numeric/conversion/<version>1.67.0
-      /boost/preprocessor/<version>1.67.0
-      /boost/smart_ptr/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/tuple/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/utility/<version>1.67.0
-   : requirements =
-      @<include>../include
+      /boost/bind
+      /boost/config
+      /boost/conversion
+      /boost/core
+      /boost/detail
+      /boost/foreach
+      /boost/function
+      /boost/iterator
+      /boost/lexical_cast
+      /boost/mpl
+      /boost/numeric/conversion
+      /boost/preprocessor
+      /boost/smart_ptr
+      /boost/static_assert
+      /boost/tuple
+      /boost/type_traits
+      /boost/utility
+   : usage-requirements =
+      <include>../include
    ;

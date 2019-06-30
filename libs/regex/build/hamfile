@@ -1,24 +1,19 @@
-project boost/regex 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 lib boost.regex 
    : sources =
       [ glob ../src/*.cpp ]
-      @/boost/assert/<version>1.67.0
-      @/boost/concept_check/<version>1.67.0
-      @/boost/config/<version>1.67.0
-      @/boost/container_hash/<version>1.67.0
-      @/boost/core/<version>1.67.0
-      @/boost/integer/<version>1.67.0
-      @/boost/iterator/<version>1.67.0
-      @/boost/mpl/<version>1.67.0
-      @/boost/predef/<version>1.67.0
-      @/boost/smart_ptr/<version>1.67.0
-      @/boost/static_assert/<version>1.67.0
-      @/boost/throw_exception/<version>1.67.0
-      @/boost/type_traits/<version>1.67.0
+      @/boost/assert
+      @/boost/concept_check
+      @/boost/config
+      @/boost/container_hash
+      @/boost/core
+      @/boost/integer
+      @/boost/iterator
+      @/boost/mpl
+      @/boost/predef
+      @/boost/smart_ptr
+      @/boost/static_assert
+      @/boost/throw_exception
+      @/boost/type_traits
    : requirements = 
       @<include>../include
       @(<link>shared -> <define>"BOOST_REGEX_DYN_LINK=1")

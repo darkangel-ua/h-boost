@@ -1,27 +1,22 @@
-project boost/signals2 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.signals2
    : sources =
-      /boost/assert/<version>1.67.0
-      /boost/bind/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/function/<version>1.67.0
-      /boost/iterator/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/multi_index/<version>1.67.0
-      /boost/optional/<version>1.67.0
-      /boost/parameter/<version>1.67.0
-      /boost/predef/<version>1.67.0
-      /boost/preprocessor/<version>1.67.0
-      /boost/smart_ptr/<version>1.67.0
-      /boost/throw_exception/<version>1.67.0
-      /boost/tuple/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/variant/<version>1.67.0
+      /boost/assert
+      /boost/bind
+      /boost/config
+      /boost/core
+      /boost/function
+      /boost/iterator
+      /boost/mpl
+      /boost/multi_index
+      /boost/optional
+      /boost/parameter
+      /boost/predef
+      /boost/preprocessor
+      /boost/smart_ptr
+      /boost/throw_exception
+      /boost/tuple
+      /boost/type_traits
+      /boost/variant
    : usage-requirements =
       <include>../include
    ;

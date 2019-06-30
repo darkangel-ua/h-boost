@@ -1,25 +1,20 @@
-project boost/bimap 
-   : requirements =
-      <version>1.67.0
-   ;
-
 header-lib boost.bimap
    : sources =
-      /boost/concept_check/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/container_hash/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/iterator/<version>1.67.0
-      /boost/lambda/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/multi_index/<version>1.67.0
-      /boost/preprocessor/<version>1.67.0
-      /boost/property_map/<version>1.67.0
-      /boost/serialization/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/throw_exception/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/utility/<version>1.67.0
+      /boost/concept_check
+      /boost/config
+      /boost/container_hash
+      /boost/core
+      /boost/iterator
+      /boost/lambda
+      /boost/mpl
+      /boost/multi_index
+      /boost/preprocessor
+      /boost/property_map
+      /boost/serialization
+      /boost/static_assert
+      /boost/throw_exception
+      /boost/type_traits
+      /boost/utility
    : usage-requirements =
       <include>../include
    ;

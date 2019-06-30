@@ -1,22 +1,17 @@
-project boost/statechart 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.statechart
    : sources =
-      /boost/assert/<version>1.67.0
-      /boost/bind/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/conversion/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/detail/<version>1.67.0
-      /boost/function/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/smart_ptr/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/thread/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
+      /boost/assert
+      /boost/bind
+      /boost/config
+      /boost/conversion
+      /boost/core
+      /boost/detail
+      /boost/function
+      /boost/mpl
+      /boost/smart_ptr
+      /boost/static_assert
+      /boost/thread
+      /boost/type_traits
    : usage-requirements =
       <include>../include
    ;

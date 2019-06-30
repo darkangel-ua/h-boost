@@ -1,13 +1,8 @@
-project boost/numeric/interval 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.numeric.interval  
    : sources =
-      /boost/config/<version>1.67.0
-      /boost/detail/<version>1.67.0
-      /boost/logic/<version>1.67.0
-   : requirements =
-      @<include>../include
+      /boost/config
+      /boost/detail
+      /boost/logic
+   : usage-requirements =
+      <include>../include
    ;

@@ -1,20 +1,15 @@
-project boost/timer
-   : requirements =
-      <version>1.67.0
-   ;
-
 lib boost.timer
    : sources =
       [ glob ../src/*.cpp ]
-      @/boost/config/<version>1.67.0
-      @/boost/core/<version>1.67.0
-      @/boost/system/<version>1.67.0
-      /boost/chrono/<version>1.67.0
+      @/boost/config
+      @/boost/core
+      @/boost/system
+      /boost/chrono
    : requirements =
       @(<link>shared -> <define>"BOOST_TIMER_DYN_LINK=1")
       @(<link>static -> <define>"BOOST_TIMER_STATIC_LINK=1")
    : usage-requirements =
       # for some mistical reasons we somehow import symbols from /boost/system to dependencies
       # that might happens for some inlines but I didn't find anything similar in timer sources
-      <source>(/boost/system/<version>1.67.0)  
+      <source>(/boost/system)  
    ;

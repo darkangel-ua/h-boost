@@ -1,16 +1,11 @@
-project boost/conversion 
-   : requirements =
-      <version>1.67.0
-   ;
-
 header-lib boost.conversion 
    : sources =
-      /boost/assert/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/smart_ptr/<version>1.67.0
-      /boost/throw_exception/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/typeof/<version>1.67.0
-   : requirements =
-      @<include>../include
+      /boost/assert
+      /boost/config
+      /boost/smart_ptr
+      /boost/throw_exception
+      /boost/type_traits
+      /boost/typeof
+   : usage-requirements =
+      <include>../include
    ;

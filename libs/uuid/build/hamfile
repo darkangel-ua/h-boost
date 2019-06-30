@@ -1,24 +1,19 @@
-project boost/uuid 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.uuid
    : sources =
-      /boost/assert/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/io/<version>1.67.0
-      /boost/numeric/conversion/<version>1.67.0
-      /boost/predef/<version>1.67.0
-      /boost/random/<version>1.67.0
-      /boost/serialization/<version>1.67.0
-      /boost/smart_ptr/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/throw_exception/<version>1.67.0
-      /boost/tti/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/winapi/<version>1.67.0
+      /boost/assert
+      /boost/config
+      /boost/core
+      /boost/io
+      /boost/numeric/conversion
+      /boost/predef
+      /boost/random
+      /boost/serialization
+      /boost/smart_ptr
+      /boost/static_assert
+      /boost/throw_exception
+      /boost/tti
+      /boost/type_traits
+      /boost/winapi
    : usage-requirements =
       <include>../include
    ;

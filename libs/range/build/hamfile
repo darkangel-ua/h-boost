@@ -1,27 +1,22 @@
-project boost/range 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.range 
    : sources =
-      /boost/array/<version>1.67.0
-      /boost/assert/<version>1.67.0
-      /boost/concept_check/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/container_hash/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/detail/<version>1.67.0
-      /boost/iterator/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/numeric/conversion/<version>1.67.0
-      /boost/optional/<version>1.67.0
-      /boost/preprocessor/<version>1.67.0
-      /boost/regex/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/tuple/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/utility/<version>1.67.0
-   : requirements =
-      @<include>../include
+      /boost/array
+      /boost/assert
+      /boost/concept_check
+      /boost/config
+      /boost/container_hash
+      /boost/core
+      /boost/detail
+      /boost/iterator
+      /boost/mpl
+      /boost/numeric/conversion
+      /boost/optional
+      /boost/preprocessor
+      /boost/regex
+      /boost/static_assert
+      /boost/tuple
+      /boost/type_traits
+      /boost/utility
+   : usage-requirements =
+      <include>../include
    ;

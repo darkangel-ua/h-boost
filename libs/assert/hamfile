@@ -6,4 +6,4 @@ project boost/assert
    ;
 
 use-project location = ./build : match = exact ;
-use-project test : location = ./test : match = exact ;
+use-project test : location = ./test ;

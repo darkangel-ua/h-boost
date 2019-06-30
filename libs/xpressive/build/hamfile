@@ -1,31 +1,26 @@
-project boost/xpressive 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.xpressive 
    : sources =
-      /boost/assert/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/conversion/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/exception/<version>1.67.0
-      /boost/fusion/<version>1.67.0
-      /boost/integer/<version>1.67.0
-      /boost/iterator/<version>1.67.0
-      /boost/lexical_cast/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/numeric/conversion/<version>1.67.0
-      /boost/optional/<version>1.67.0
-      /boost/preprocessor/<version>1.67.0
-      /boost/proto/<version>1.67.0
-      /boost/range/<version>1.67.0
-      /boost/smart_ptr/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/throw_exception/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/typeof/<version>1.67.0
-      /boost/utility/<version>1.67.0
+      /boost/assert
+      /boost/config
+      /boost/conversion
+      /boost/core
+      /boost/exception
+      /boost/fusion
+      /boost/integer
+      /boost/iterator
+      /boost/lexical_cast
+      /boost/mpl
+      /boost/numeric/conversion
+      /boost/optional
+      /boost/preprocessor
+      /boost/proto
+      /boost/range
+      /boost/smart_ptr
+      /boost/static_assert
+      /boost/throw_exception
+      /boost/type_traits
+      /boost/typeof
+      /boost/utility
    : usage-requirements = 
       <include>../include
    ;

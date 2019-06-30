@@ -1,18 +1,13 @@
-project boost/exception 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 lib boost.exception 
    : sources =
       ../src/clone_current_exception_non_intrusive.cpp
-      @/boost/assert/<version>1.67.0
-      @/boost/config/<version>1.67.0
-      @/boost/core/<version>1.67.0
-      @/boost/smart_ptr/<version>1.67.0
-      @/boost/throw_exception/<version>1.67.0
-      @/boost/tuple/<version>1.67.0
-      @/boost/type_traits/<version>1.67.0
+      @/boost/assert
+      @/boost/config
+      @/boost/core
+      @/boost/smart_ptr
+      @/boost/throw_exception
+      @/boost/tuple
+      @/boost/type_traits
    : requirements =
       @<include>../include
       <link>static

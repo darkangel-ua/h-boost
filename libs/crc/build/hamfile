@@ -1,12 +1,7 @@
-project boost/crc 
-   : requirements = 
-      <version>1.67.0 
-   ;
-
 header-lib boost.crc
    : sources =
-      /boost/config/<version>1.67.0
-      /boost/integer/<version>1.67.0
-   : requirements =
-      @<include>../include
+      /boost/config
+      /boost/integer
+   : usage-requirements =
+      <include>../include
    ;

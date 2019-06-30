@@ -1,13 +1,8 @@
-project boost/coroutine2
-   : requirements =
-      <version>1.67.0
-   ;
-
 header-lib boost.coroutine2
    : sources =
-      /boost/assert/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/context/<version>1.67.0
+      /boost/assert
+      /boost/config
+      /boost/context
    : usage-requirements =
       <include>../include
    ;

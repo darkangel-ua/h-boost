@@ -1,23 +1,18 @@
-project boost/lexical_cast 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.lexical_cast 
    : sources =
-      /boost/array/<version>1.67.0
-      /boost/assert/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/container/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/integer/<version>1.67.0
-      /boost/math/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/numeric/conversion/<version>1.67.0
-      /boost/range/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/throw_exception/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-   : requirements =
-      @<include>../include
+      /boost/array
+      /boost/assert
+      /boost/config
+      /boost/container
+      /boost/core
+      /boost/integer
+      /boost/math
+      /boost/mpl
+      /boost/numeric/conversion
+      /boost/range
+      /boost/static_assert
+      /boost/throw_exception
+      /boost/type_traits
+   : usage-requirements =
+      <include>../include
    ;

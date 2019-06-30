@@ -1,30 +1,25 @@
-project boost/iostreams 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 lib boost.iostreams 
    : sources =
       ../src/mapped_file.cpp
       ../src/file_descriptor.cpp
-      @/boost/assert/<version>1.67.0
-      @/boost/bind/<version>1.67.0
-      @/boost/config/<version>1.67.0
-      @/boost/core/<version>1.67.0
-      @/boost/detail/<version>1.67.0
-      @/boost/function/<version>1.67.0
-      @/boost/integer/<version>1.67.0
-      @/boost/iterator/<version>1.67.0
-      @/boost/mpl/<version>1.67.0
-      @/boost/preprocessor/<version>1.67.0
-      @/boost/random/<version>1.67.0
-      @/boost/range/<version>1.67.0
-      @/boost/regex/<version>1.67.0
-      @/boost/smart_ptr/<version>1.67.0
-      @/boost/static_assert/<version>1.67.0
-      @/boost/throw_exception/<version>1.67.0
-      @/boost/type_traits/<version>1.67.0
-      @/boost/utility/<version>1.67.0
+      @/boost/assert
+      @/boost/bind
+      @/boost/config
+      @/boost/core
+      @/boost/detail
+      @/boost/function
+      @/boost/integer
+      @/boost/iterator
+      @/boost/mpl
+      @/boost/preprocessor
+      @/boost/random
+      @/boost/range
+      @/boost/regex
+      @/boost/smart_ptr
+      @/boost/static_assert
+      @/boost/throw_exception
+      @/boost/type_traits
+      @/boost/utility
    : requirements =
       @<include>../include
        <define>BOOST_IOSTREAMS_USE_DEPRECATED

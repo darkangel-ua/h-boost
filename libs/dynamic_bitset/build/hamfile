@@ -1,17 +1,12 @@
-project boost/dynamic_bitset
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.dynamic_bitset
    : sources =
-      /boost/config/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/integer/<version>1.67.0
-      /boost/move/<version>1.67.0
-      /boost/serialization/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/throw_exception/<version>1.67.0
+      /boost/config
+      /boost/core
+      /boost/integer
+      /boost/move
+      /boost/serialization
+      /boost/static_assert
+      /boost/throw_exception
    : usage-requirements =
       <include>../include
    ;

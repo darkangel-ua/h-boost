@@ -1,21 +1,16 @@
-project boost/functional 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.functional 
    : sources = 
-      /boost/config/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/function/<version>1.67.0
-      /boost/function_types/<version>1.67.0
-      /boost/iterator/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/optional/<version>1.67.0
-      /boost/preprocessor/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/typeof/<version>1.67.0
-      /boost/utility/<version>1.67.0
-   : requirements = 
-      @<include>../include
+      /boost/config
+      /boost/core
+      /boost/function
+      /boost/function_types
+      /boost/iterator
+      /boost/mpl
+      /boost/optional
+      /boost/preprocessor
+      /boost/type_traits
+      /boost/typeof
+      /boost/utility
+   : usage-requirements = 
+      <include>../include
    ;

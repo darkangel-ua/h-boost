@@ -1,25 +1,20 @@
-project boost/dll
-   : requirements = 
-      <version>1.67.0
-   ;
-
 header-lib boost.dll
    : sources =
-      /boost/config/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/filesystem/<version>1.67.0
-      /boost/function/<version>1.67.0
-      /boost/move/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/predef/<version>1.67.0
-      /boost/smart_ptr/<version>1.67.0
-      /boost/spirit/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/system/<version>1.67.0
-      /boost/throw_exception/<version>1.67.0
-      /boost/type_index/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/winapi/<version>1.67.0
+      /boost/config
+      /boost/core
+      /boost/filesystem
+      /boost/function
+      /boost/move
+      /boost/mpl
+      /boost/predef
+      /boost/smart_ptr
+      /boost/spirit
+      /boost/static_assert
+      /boost/system
+      /boost/throw_exception
+      /boost/type_index
+      /boost/type_traits
+      /boost/winapi
    : usage-requirements =
       <include>../include
    ;

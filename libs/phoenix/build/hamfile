@@ -1,24 +1,19 @@
-project boost/phoenix 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.phoenix 
    : sources =
-      /boost/assert/<version>1.67.0
-      /boost/bind/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/function/<version>1.67.0
-      /boost/fusion/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/predef/<version>1.67.0
-      /boost/preprocessor/<version>1.67.0
-      /boost/proto/<version>1.67.0
-      /boost/range/<version>1.67.0
-      /boost/smart_ptr/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/utility/<version>1.67.0
+      /boost/assert
+      /boost/bind
+      /boost/config
+      /boost/core
+      /boost/function
+      /boost/fusion
+      /boost/mpl
+      /boost/predef
+      /boost/preprocessor
+      /boost/proto
+      /boost/range
+      /boost/smart_ptr
+      /boost/type_traits
+      /boost/utility
    : usage-requirements =
       <include>../include
    ;

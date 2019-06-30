@@ -1,29 +1,24 @@
-project boost/multi_index 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.multi_index
    : sources =
-      /boost/assert/<version>1.67.0
-      /boost/bind/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/container_hash/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/detail/<version>1.67.0
-      /boost/foreach/<version>1.67.0
-      /boost/integer/<version>1.67.0
-      /boost/iterator/<version>1.67.0
-      /boost/move/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/preprocessor/<version>1.67.0
-      /boost/serialization/<version>1.67.0
-      /boost/smart_ptr/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/throw_exception/<version>1.67.0
-      /boost/tuple/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/utility/<version>1.67.0
+      /boost/assert
+      /boost/bind
+      /boost/config
+      /boost/container_hash
+      /boost/core
+      /boost/detail
+      /boost/foreach
+      /boost/integer
+      /boost/iterator
+      /boost/move
+      /boost/mpl
+      /boost/preprocessor
+      /boost/serialization
+      /boost/smart_ptr
+      /boost/static_assert
+      /boost/throw_exception
+      /boost/tuple
+      /boost/type_traits
+      /boost/utility
    : usage-requirements =
       <include>../include
    ;

@@ -1,25 +1,24 @@
-project boost/tr1 : requirements = <version>1.58.0+1 ;
-
 header-lib boost.tr1 
-   :
-     /boost/array/<version>1.58.0+1
-     /boost/assert/<version>1.58.0+1
-     /boost/bind/<version>1.58.0+1
-     /boost/config/<version>1.58.0+1
-     /boost/core/<version>1.58.0+1
-     /boost/function/<version>1.58.0+1
-     /boost/functional/<version>1.58.0+1
-     /boost/fusion/<version>1.58.0+1
-     /boost/iterator/<version>1.58.0+1
-     /boost/math/<version>1.58.0+1
-     /boost/mpl/<version>1.58.0+1
-     /boost/random/<version>1.58.0+1
-     /boost/regex/<version>1.58.0+1
-     /boost/smart_ptr/<version>1.58.0+1
-     /boost/static_assert/<version>1.58.0+1
-     /boost/tuple/<version>1.58.0+1
-     /boost/type_traits/<version>1.58.0+1
-     /boost/unordered/<version>1.58.0+1
-     /boost/utility/<version>1.58.0+1
-   : @<include>../include
+   : sources =
+      /boost/array
+      /boost/assert
+      /boost/bind
+      /boost/config
+      /boost/core
+      /boost/function
+      /boost/functional
+      /boost/fusion
+      /boost/iterator
+      /boost/math
+      /boost/mpl
+      /boost/random
+      /boost/regex
+      /boost/smart_ptr
+      /boost/static_assert
+      /boost/tuple
+      /boost/type_traits
+      /boost/unordered
+      /boost/utility
+   : usage-requirements = 
+      <include>../include
    ;

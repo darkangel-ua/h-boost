@@ -1,25 +1,20 @@
-project boost/variant 
-   : requirements =
-       <version>1.67.0
-   ;
-
 header-lib boost.variant 
    : sources =
-      /boost/assert/<version>1.67.0
-      /boost/bind/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/container_hash/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/detail/<version>1.67.0
-      /boost/integer/<version>1.67.0
-      /boost/move/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/preprocessor/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/throw_exception/<version>1.67.0
-      /boost/type_index/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/utility/<version>1.67.0 
-   : requirements =
-      @<include>../include
+      /boost/assert
+      /boost/bind
+      /boost/config
+      /boost/container_hash
+      /boost/core
+      /boost/detail
+      /boost/integer
+      /boost/move
+      /boost/mpl
+      /boost/preprocessor
+      /boost/static_assert
+      /boost/throw_exception
+      /boost/type_index
+      /boost/type_traits
+      /boost/utility
+   : usage-requirements =
+      <include>../include
    ;

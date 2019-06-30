@@ -1,0 +1,9 @@
+project boost/ratio
+   : requirements =
+      <version>1.67.0
+   : dependencies =
+      { /boost/** : 1.67.0 }
+   ;
+
+use-project location = ./build : match = exact ;
+#use-project test : location = ./test ;

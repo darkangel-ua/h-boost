@@ -1,24 +1,19 @@
-project boost/random 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 lib boost.random 
    : sources =
       [ glob ../src/*.cpp ]
-      @/boost/assert/<version>1.67.0
-      @/boost/config/<version>1.67.0
-      @/boost/core/<version>1.67.0
-      @/boost/integer/<version>1.67.0
-      @/boost/io/<version>1.67.0
-      @/boost/math/<version>1.67.0
-      @/boost/mpl/<version>1.67.0
-      @/boost/range/<version>1.67.0
-      @/boost/static_assert/<version>1.67.0
-      @/boost/system/<version>1.67.0
-      @/boost/throw_exception/<version>1.67.0
-      @/boost/type_traits/<version>1.67.0
-      @/boost/utility/<version>1.67.0
+      @/boost/assert
+      @/boost/config
+      @/boost/core
+      @/boost/integer
+      @/boost/io
+      @/boost/math
+      @/boost/mpl
+      @/boost/range
+      @/boost/static_assert
+      @/boost/system
+      @/boost/throw_exception
+      @/boost/type_traits
+      @/boost/utility
    : requirements =
       @<include>../include
       @(<link>shared -> <define>BOOST_RANDOM_DYN_LINK)

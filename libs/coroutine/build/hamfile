@@ -1,8 +1,3 @@
-project boost/coroutine
-   : requirements =
-      <version>1.67.0
-   ;
-
 local
 alias stack_traits_sources
    : sources =
@@ -22,17 +17,17 @@ lib boost.coroutine
       ../src/detail/coroutine_context.cpp
       ../src/exceptions.cpp
       stack_traits_sources
-      @/boost/assert/<version>1.67.0
-      @/boost/config/<version>1.67.0
-      @/boost/context/<version>1.67.0
-      @/boost/core/<version>1.67.0
-      @/boost/exception/<version>1.67.0
-      @/boost/move/<version>1.67.0
-      @/boost/range/<version>1.67.0
-      @/boost/system/<version>1.67.0
-      @/boost/throw_exception/<version>1.67.0
-      @/boost/type_traits/<version>1.67.0
-      @/boost/utility/<version>1.67.0
+      @/boost/assert
+      @/boost/config
+      @/boost/context
+      @/boost/core
+      @/boost/exception
+      @/boost/move
+      @/boost/range
+      @/boost/system
+      @/boost/throw_exception
+      @/boost/type_traits
+      @/boost/utility
    : requirements =
 #      (<toolset>gcc && <segmented-stacks>on -> <cxxflags>"-fsplit-stack" <cxxflags>-DBOOST_USE_SEGMENTED_STACKS)
 #      <toolset>clang,<segmented-stacks>on:<cxxflags>-fsplit-stack

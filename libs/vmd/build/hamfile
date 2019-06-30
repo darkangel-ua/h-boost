@@ -1,11 +1,6 @@
-project boost/vmd 
-   : requirements =
-      <version>1.67.0
-   ;
-
 header-lib boost.vmd
    : sources =
-      /boost/preprocessor/<version>1.67.0
-   : requirements =
-      @<include>../include
+      /boost/preprocessor
+   : usage-requirements =
+      <include>../include
    ;

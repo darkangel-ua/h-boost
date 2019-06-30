@@ -1,15 +1,10 @@
-project boost/qvm
-   : requirements =
-      <version>1.67.0
-   ;
-
 header-lib boost.qvm
    : sources =
-      /boost/assert/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/exception/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/throw_exception/<version>1.67.0
-   : requirements =
-      @<include>../include
+      /boost/assert
+      /boost/core
+      /boost/exception
+      /boost/static_assert
+      /boost/throw_exception
+   : usage-requirements =
+      <include>../include
    ;

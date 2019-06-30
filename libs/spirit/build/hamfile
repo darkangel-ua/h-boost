@@ -1,49 +1,44 @@
-project boost/spirit 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.spirit
    : sources =
-      /boost/algorithm/<version>1.67.0
-      /boost/array/<version>1.67.0
-      /boost/assert/<version>1.67.0
-      /boost/concept_check/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/endian/<version>1.67.0
-      /boost/filesystem/<version>1.67.0
-      /boost/foreach/<version>1.67.0
-      /boost/function/<version>1.67.0
-      /boost/function_types/<version>1.67.0
-      /boost/fusion/<version>1.67.0
-      /boost/integer/<version>1.67.0
-      /boost/io/<version>1.67.0
-      /boost/iostreams/<version>1.67.0
-      /boost/iterator/<version>1.67.0
-      /boost/lexical_cast/<version>1.67.0
-      /boost/locale/<version>1.67.0
-      /boost/math/<version>1.67.0
-      /boost/move/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/optional/<version>1.67.0
-      /boost/phoenix/<version>1.67.0
-      /boost/pool/<version>1.67.0
-      /boost/predef/<version>1.67.0
-      /boost/preprocessor/<version>1.67.0
-      /boost/proto/<version>1.67.0
-      /boost/range/<version>1.67.0
-      /boost/regex/<version>1.67.0
-      /boost/smart_ptr/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/thread/<version>1.67.0         #circular dependency
-      /boost/throw_exception/<version>1.67.0
-      /boost/tti/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/typeof/<version>1.67.0
-      /boost/unordered/<version>1.67.0
-      /boost/utility/<version>1.67.0
-      /boost/variant/<version>1.67.0
+      /boost/algorithm
+      /boost/array
+      /boost/assert
+      /boost/concept_check
+      /boost/config
+      /boost/core
+      /boost/endian
+      /boost/filesystem
+      /boost/foreach
+      /boost/function
+      /boost/function_types
+      /boost/fusion
+      /boost/integer
+      /boost/io
+      /boost/iostreams
+      /boost/iterator
+      /boost/lexical_cast
+      /boost/locale
+      /boost/math
+      /boost/move
+      /boost/mpl
+      /boost/optional
+      /boost/phoenix
+      /boost/pool
+      /boost/predef
+      /boost/preprocessor
+      /boost/proto
+      /boost/range
+      /boost/regex
+      /boost/smart_ptr
+      /boost/static_assert
+      /boost/thread                       #circular dependency
+      /boost/throw_exception
+      /boost/tti
+      /boost/type_traits
+      /boost/typeof
+      /boost/unordered
+      /boost/utility
+      /boost/variant
    : usage-requirements =
       <include>../include
    ;

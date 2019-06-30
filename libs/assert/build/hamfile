@@ -1,6 +1,6 @@
 header-lib boost.assert
    : sources =
       /boost/config
-   : requirements = 
-      @<include>../include
+   : usage-requirements = 
+      <include>../include
    ;

@@ -1,4 +1,4 @@
-test-suite algorithm 
+testing.suite algorithm 
    :
 # Search tests
      [ testing.run empty_search_test.cpp ]

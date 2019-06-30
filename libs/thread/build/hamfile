@@ -1,8 +1,3 @@
-project boost/thread 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 local
 searched-shared-lib pthread : : pthread ;                                                                  
 
@@ -26,34 +21,34 @@ lib boost.thread
    : sources = 
       ../src/future.cpp
       src
-      @/boost/assert/<version>1.67.0
-      @/boost/atomic/<version>1.67.0
-      @/boost/bind/<version>1.67.0
-      @/boost/chrono/<version>1.67.0
-      @/boost/concept_check/<version>1.67.0
-      @/boost/config/<version>1.67.0
-      @/boost/container/<version>1.67.0
-      @/boost/container_hash/<version>1.67.0
-      @/boost/core/<version>1.67.0
-      @/boost/date_time/<version>1.67.0
-      @/boost/exception/<version>1.67.0
-      @/boost/function/<version>1.67.0
-      @/boost/intrusive/<version>1.67.0
-      @/boost/io/<version>1.67.0
-      @/boost/iterator/<version>1.67.0
-      @/boost/move/<version>1.67.0
-      @/boost/mpl/<version>1.67.0
-      @/boost/optional/<version>1.67.0
-      @/boost/predef/<version>1.67.0
-      @/boost/preprocessor/<version>1.67.0
-      @/boost/smart_ptr/<version>1.67.0
-      @/boost/static_assert/<version>1.67.0
-      @/boost/system/<version>1.67.0
-      @/boost/throw_exception/<version>1.67.0
-      @/boost/tuple/<version>1.67.0
-      @/boost/type_traits/<version>1.67.0
-      @/boost/utility/<version>1.67.0
-      @/boost/winapi/<version>1.67.0
+      @/boost/assert
+      @/boost/atomic
+      @/boost/bind
+      @/boost/chrono
+      @/boost/concept_check
+      @/boost/config
+      @/boost/container
+      @/boost/container_hash
+      @/boost/core
+      @/boost/date_time
+      @/boost/exception
+      @/boost/function
+      @/boost/intrusive
+      @/boost/io
+      @/boost/iterator
+      @/boost/move
+      @/boost/mpl
+      @/boost/optional
+      @/boost/predef
+      @/boost/preprocessor
+      @/boost/smart_ptr
+      @/boost/static_assert
+      @/boost/system
+      @/boost/throw_exception
+      @/boost/tuple
+      @/boost/type_traits
+      @/boost/utility
+      @/boost/winapi
    : requirements =
       @<include>../include
       @(<link>static -> <define>"BOOST_THREAD_BUILD_LIB=1")
@@ -61,5 +56,5 @@ lib boost.thread
       @<define>BOOST_THREAD_NO_LIB
    : usage-requirements =
       (<target-os>linux -> <source>pthread)
-      (<link>shared -> <source>(/boost/system/<version>1.67.0))
+      (<link>shared -> <source>(/boost/system))
    ;

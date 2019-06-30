@@ -1,22 +1,17 @@
-project boost/numeric/ublas 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.numeric.ublas
    : sources =
-      /boost/concept_check/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/iterator/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/numeric/interval/<version>1.67.0
-      /boost/range/<version>1.67.0
-      /boost/serialization/<version>1.67.0
-      /boost/smart_ptr/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/typeof/<version>1.67.0
+      /boost/concept_check
+      /boost/config
+      /boost/core
+      /boost/iterator
+      /boost/mpl
+      /boost/numeric/interval
+      /boost/range
+      /boost/serialization
+      /boost/smart_ptr
+      /boost/static_assert
+      /boost/type_traits
+      /boost/typeof
    : usage-requirements =
       <include>../include
    ;

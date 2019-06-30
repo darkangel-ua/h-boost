@@ -1,24 +1,19 @@
-project boost/ptr_container 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.ptr_container
    : sources =
-      /boost/array/<version>1.67.0
-      /boost/assert/<version>1.67.0
-      /boost/circular_buffer/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/iterator/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/range/<version>1.67.0
-      /boost/serialization/<version>1.67.0
-      /boost/smart_ptr/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/unordered/<version>1.67.0
-      /boost/utility/<version>1.67.0
+      /boost/array
+      /boost/assert
+      /boost/circular_buffer
+      /boost/config
+      /boost/core
+      /boost/iterator
+      /boost/mpl
+      /boost/range
+      /boost/serialization
+      /boost/smart_ptr
+      /boost/static_assert
+      /boost/type_traits
+      /boost/unordered
+      /boost/utility
    : usage-requirements =
       <include>../include
    ;

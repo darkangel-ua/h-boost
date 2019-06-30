@@ -1,11 +1,6 @@
-project boost/mp11
-   : requirements =
-      <version>1.67.0
-   ;
-
 header-lib boost.mp11
    : sources =
-      /boost/config/<version>1.67.0
-   : requirements =
-      @<include>../include
+      /boost/config
+   : usage-requirements =
+      <include>../include
    ;

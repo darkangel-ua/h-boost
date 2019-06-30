@@ -1,22 +1,17 @@
-project boost/function 
-   : requirements =
-       <version>1.67.0 
-   ;
-
 header-lib boost.function 
    : sources = 
-      /boost/assert/<version>1.67.0
-      /boost/bind/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/integer/<version>1.67.0
-      /boost/move/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/preprocessor/<version>1.67.0
-      /boost/throw_exception/<version>1.67.0
-      /boost/type_index/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/typeof/<version>1.67.0
-   : requirements =
-      @<include>../include
+      /boost/assert
+      /boost/bind
+      /boost/config
+      /boost/core
+      /boost/integer
+      /boost/move
+      /boost/mpl
+      /boost/preprocessor
+      /boost/throw_exception
+      /boost/type_index
+      /boost/type_traits
+      /boost/typeof
+   : usage-requirements =
+      <include>../include
    ;

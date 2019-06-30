@@ -1,8 +1,3 @@
-project boost/serialization 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 lib boost.serialization
    : sources =
       ../src/basic_archive.cpp
@@ -34,26 +29,26 @@ lib boost.serialization
       ../src/xml_archive_exception.cpp
       ../src/codecvt_null.cpp
       ../src/utf8_codecvt_facet.cpp
-      @/boost/array/<version>1.67.0
-      @/boost/assert/<version>1.67.0
-      @/boost/config/<version>1.67.0
-      @/boost/core/<version>1.67.0
-      @/boost/detail/<version>1.67.0
-      @/boost/integer/<version>1.67.0
-      @/boost/io/<version>1.67.0
-      @/boost/iterator/<version>1.67.0
-      @/boost/move/<version>1.67.0
-      @/boost/mpl/<version>1.67.0
-      @/boost/optional/<version>1.67.0
-      @/boost/predef/<version>1.67.0
-      @/boost/preprocessor/<version>1.67.0
-      @/boost/smart_ptr/<version>1.67.0
-      @/boost/spirit/<version>1.67.0           
-      @/boost/static_assert/<version>1.67.0
-      @/boost/type_traits/<version>1.67.0
-      @/boost/unordered/<version>1.67.0
-      @/boost/utility/<version>1.67.0
-      @/boost/variant/<version>1.67.0
+      @/boost/array
+      @/boost/assert
+      @/boost/config
+      @/boost/core
+      @/boost/detail
+      @/boost/integer
+      @/boost/io
+      @/boost/iterator
+      @/boost/move
+      @/boost/mpl
+      @/boost/optional
+      @/boost/predef
+      @/boost/preprocessor
+      @/boost/smart_ptr
+      @/boost/spirit
+      @/boost/static_assert
+      @/boost/type_traits
+      @/boost/unordered
+      @/boost/utility
+      @/boost/variant
    : requirements =
       @<include>../include
       #<toolset>gcc:<cxxflags>"-fvisibility=hidden"

@@ -1,27 +1,22 @@
-project boost/msm 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.msm
    : sources =
-      /boost/any/<version>1.67.0
-      /boost/assert/<version>1.67.0
-      /boost/bind/<version>1.67.0
-      /boost/circular_buffer/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/function/<version>1.67.0
-      /boost/fusion/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/parameter/<version>1.67.0
-      /boost/phoenix/<version>1.67.0
-      /boost/preprocessor/<version>1.67.0
-      /boost/proto/<version>1.67.0
-      /boost/serialization/<version>1.67.0
-      /boost/tuple/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/typeof/<version>1.67.0
+      /boost/any
+      /boost/assert
+      /boost/bind
+      /boost/circular_buffer
+      /boost/config
+      /boost/core
+      /boost/function
+      /boost/fusion
+      /boost/mpl
+      /boost/parameter
+      /boost/phoenix
+      /boost/preprocessor
+      /boost/proto
+      /boost/serialization
+      /boost/tuple
+      /boost/type_traits
+      /boost/typeof
    : usage-requirements =
       <include>../include
    ;

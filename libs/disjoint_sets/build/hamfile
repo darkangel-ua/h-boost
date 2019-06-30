@@ -1,11 +1,6 @@
-project boost/disjoint_sets 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.disjoint_sets
    : sources =
-#      /boost/graph/<version>1.67.0  -- circular dependency
+#      /boost/graph  -- circular dependency
    : usage-requirements =
       <include>../include
    ;

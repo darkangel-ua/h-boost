@@ -1,24 +1,19 @@
-project boost/lockfree 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.lockfree
    : sources =
-      /boost/align/<version>1.67.0
-      /boost/array/<version>1.67.0
-      /boost/assert/<version>1.67.0
-      /boost/atomic/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/integer/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/parameter/<version>1.67.0
-      /boost/predef/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/tuple/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-      /boost/utility/<version>1.67.0
+      /boost/align
+      /boost/array
+      /boost/assert
+      /boost/atomic
+      /boost/config
+      /boost/core
+      /boost/integer
+      /boost/mpl
+      /boost/parameter
+      /boost/predef
+      /boost/static_assert
+      /boost/tuple
+      /boost/type_traits
+      /boost/utility
    : usage-requirements =
       <include>../include
    ;

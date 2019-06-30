@@ -1,29 +1,24 @@
-project boost/math 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.math 
    : sources =
-      /boost/array/<version>1.67.0
-      /boost/assert/<version>1.67.0
-      /boost/atomic/<version>1.67.0
-      /boost/concept_check/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/core/<version>1.67.0
-      /boost/detail/<version>1.67.0
-      /boost/fusion/<version>1.67.0
-      /boost/integer/<version>1.67.0 
-      /boost/lambda/<version>1.67.0 
-#      /boost/lexical_cast/<version>1.67.0 circular dependency
-      /boost/mpl/<version>1.67.0
-      /boost/predef/<version>1.67.0
-      /boost/range/<version>1.67.0
-      /boost/smart_ptr/<version>1.67.0
-      /boost/static_assert/<version>1.67.0
-      /boost/throw_exception/<version>1.67.0
-      /boost/tuple/<version>1.67.0
-      /boost/type_traits/<version>1.67.0
-   : requirements =
-      @<include>../include
+      /boost/array
+      /boost/assert
+      /boost/atomic
+      /boost/concept_check
+      /boost/config
+      /boost/core
+      /boost/detail
+      /boost/fusion
+      /boost/integer
+      /boost/lambda
+#      /boost/lexical_cast circular dependency
+      /boost/mpl
+      /boost/predef
+      /boost/range
+      /boost/smart_ptr
+      /boost/static_assert
+      /boost/throw_exception
+      /boost/tuple
+      /boost/type_traits
+   : usage-requirements =
+      <include>../include
    ;

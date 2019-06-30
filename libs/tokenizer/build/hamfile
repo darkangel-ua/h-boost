@@ -1,15 +1,10 @@
-project boost/tokenizer 
-   : requirements =
-      <version>1.67.0 
-   ;
-
 header-lib boost.tokenizer
    : sources =
-      /boost/assert/<version>1.67.0
-      /boost/config/<version>1.67.0
-      /boost/iterator/<version>1.67.0
-      /boost/mpl/<version>1.67.0
-      /boost/throw_exception/<version>1.67.0
-   : requirements =
-      @<include>../include
+      /boost/assert
+      /boost/config
+      /boost/iterator
+      /boost/mpl
+      /boost/throw_exception
+   : usage-requirements =
+      <include>../include
    ;
