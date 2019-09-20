@@ -14,6 +14,16 @@ header-lib boost.uuid
       /boost/tti
       /boost/type_traits
       /boost/winapi
+      bcrypt
    : usage-requirements =
       <include>../include
    ;
+
+local 
+alias bcrypt ;
+
+local
+searched-static-lib bcrypt : libname = bcrypt : requirements = <target-os>windows <host-os>linux ;
+
+local
+searched-static-lib bcrypt : libname = bcrytp.ib : requirements = <target-os>windows <host-os>windows ;

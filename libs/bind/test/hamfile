@@ -1,7 +1,5 @@
-project boost.bind.tests ;
-
 local 
-alias bind : /boost/bind/<version>1.67.0 ;
+alias bind : /boost/bind ;
 
 # quick test (for CI)
 testing.run quick.cpp ;
@@ -19,7 +17,7 @@ testing.run bind_rel_test.cpp bind ;
 testing.run bind_function_test.cpp bind ;
 testing.run bind_lookup_problem_test.cpp bind ;
 testing.run bind_rv_sp_test.cpp bind ;
-testing.compile bind_unary_addr.cpp : <use>(/boost/bind/<version>1.67.0) ;
+testing.compile bind_unary_addr.cpp : <use>(/boost/bind) ;
 testing.run bind_dm3_test.cpp bind ;
 testing.run bind_visit_test.cpp bind ;
 testing.run bind_placeholder_test.cpp bind ;
@@ -53,8 +51,8 @@ testing.run bind_function_ap_test.cpp bind ;
 testing.run bind_type_test.cpp bind ;
 testing.run bind_unique_ptr_test.cpp bind ;
 testing.run bind_nested_rv_test.cpp bind ;
-testing.compile arg_copy_test.cpp : <use>(/boost/bind/<version>1.67.0) ;
-testing.compile-fail arg_copy_fail.cpp : <use>(/boost/bind/<version>1.67.0) ;
+testing.compile arg_copy_test.cpp : <use>(/boost/bind) ;
+testing.compile-fail arg_copy_fail.cpp : <use>(/boost/bind) ;
 testing.run placeholder_std_bind_test.cpp bind ;
 testing.run bind_fastcall_test.cpp bind ;
 testing.run bind_stdcall_test.cpp bind ;

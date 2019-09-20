@@ -15,7 +15,7 @@ project
                                                                                                                                                                                                                                        
      # adding a dependency on boost/timer as the header are needed, and the junction needs                                                                                                                               
      # to be there in order to build the library.                                                                                                                                                                        
-      <source>(/boost/timer)                                                                                                                                                                                  
+#      <source>(/boost/timer)                                                                                                                                                                                  
    : usage-requirements =                                                                                                                                                                                                              
       <define>"BOOST_TEST_NO_AUTO_LINK=1"                                                                                                                                                                                   
       # Disable Warning about boost::noncopyable not being exported                                                                                                                                                       
